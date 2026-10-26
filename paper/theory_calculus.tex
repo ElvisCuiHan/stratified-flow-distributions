@@ -1,0 +1,212 @@
+\section{Distributional Calculus}
+\label{app:calculus}
+All statements use the finite component sets and measurable kernels of
+Definition~\ref{def:sfd}. Exact atoms are Dirac laws; regularized blobs can
+be represented among the continuous residual components. Component labels
+are latent and need not partition the observed space.
+
+\begin{proposition}[Normalization and latent construction]
+\label{prop:normalization}
+The SFD law is the marginal of the following construction: draw a component
+$Z$ with probabilities $\pi_c$; given an atom, set $X=\xi_a$; given a branch,
+draw $S$ with density $h_b$ and then $X\sim K_b(\cdot\mid S)$; given a
+residual, draw $X$ with density $q_r$. In particular, $P_\theta(\mathcal X)=1$.
+\end{proposition}
+\begin{proof}
+Each branch integral is a measure: for disjoint measurable sets,
+monotone convergence passes their sum through the nonnegative kernel
+integral. It has total mass $\int h_b(s)K_b(\mathcal X\mid s)\,ds=1$.
+The finite nonnegative mixture therefore has total mass $\sum_c\pi_c=1$.
+Conditioning the stated latent construction on $Z$ gives exactly its
+probability on every measurable set, proving equality of laws.
+\end{proof}
+
+\begin{proposition}[Mixed-density evaluation]
+\label{prop:mixed-density}
+For fixed atom locations and fixed exact branch maps, a common reference is
+\[
+ \nu=\lambda_d+\sum_a\delta_{\xi_a}
+            +\sum_{b\in\mathcal B_{\mathrm{ex}}}(\gamma_b)_\#ds,
+\]
+where $ds$ is restricted to the finite-volume coordinate domain. If $P_c$
+denotes each normalized component law, then
+\[
+ p_\theta=\sum_c\pi_c\frac{dP_c}{d\nu}.
+\]
+For a continuous component with Lebesgue density $g_c$, its common-reference
+density is $g_c\rho$, where $\rho=d\lambda_d/d\nu$. For an injective exact
+branch, put $\nu_{\Gamma,b}=(\gamma_b)_\#ds$. Its contribution is
+\[
+ \pi_b h_b\{\gamma_b^{-1}(x)\}
+                    \frac{d\nu_{\Gamma,b}}{d\nu}(x).
+\]
+Thus overlapping reference contributions must be converted before addition.
+\end{proposition}
+\begin{proof}
+The branch reference measures are finite and their finite sum with Lebesgue
+measure is sigma-finite. A coordinate null set has zero probability under
+$h_b(s)ds$, so its pushforward probability is dominated by its pushforward
+reference. All components are therefore dominated by $\nu$. Linearity of
+the Radon--Nikodym derivative gives the mixture formula; its chain rule gives
+the continuous and injective-branch expressions. In particular, a continuous
+density contributes zero mass at an exact atom, even if its Lebesgue density
+there is positive.
+\end{proof}
+
+For a regular immersion of intrinsic dimension $m_b$ with finite preimages,
+the area formula gives, at almost every point of its image,
+\[
+ \frac{dP_b}{d\mathcal H^{m_b}}(x)
+   =\sum_{s:\gamma_b(s)=x}\frac{h_b(s)}{J_b(s)},\qquad
+ J_b(s)=\sqrt{\det\{D\gamma_b(s)^\top D\gamma_b(s)\}}>0.
+\]
+Relative to the branch's own pushforward reference, the density is the ratio
+of this sum to $\sum_{s:\gamma_b(s)=x}1/J_b(s)$, not the unweighted sum of
+coordinate densities. The common-reference conversion still applies.
+
+\subsection{Expectation, Moments and Covariance}
+For completeness, Proposition~\ref{prop:expectation} follows first for
+nonnegative $g$ by conditioning on $Z$, then $S$, and using Tonelli's theorem.
+For integrable signed $g$, apply the same argument to $g^+$ and $g^-$ and
+subtract. This proves the full identity without a Lebesgue-only assumption.
+
+In the Gaussian-tube case, whenever the second moments exist,
+\begin{align*}
+ \mu=\E_\theta X
+ &=\sum_a\pi_a\xi_a+\sum_b\pi_b\int h_b(s)\gamma_b(s)\,ds
+                         +\sum_r\pi_r\E_{q_r}X,\\
+ \E_\theta(XX^\top)
+ &=\sum_a\pi_a\xi_a\xi_a^\top
+   +\sum_b\pi_b\int h_b(s)
+       \{\gamma_b(s)\gamma_b(s)^\top+\Sigma_b(s)\}\,ds
+   +\sum_r\pi_r\E_{q_r}(XX^\top).
+\end{align*}
+The covariance is $\E_\theta(XX^\top)-\mu\mu^\top$. A branch covariance
+therefore separates variation of $\gamma_b(S)$ from the average conditional
+noise covariance $\int h_b(s)\Sigma_b(s)\,ds$. If the component moment
+generating functions and the following integrals are finite near the origin,
+\[
+ M_X(t)=\sum_a\pi_a e^{t^\top\xi_a}
+ +\sum_b\pi_b\int h_b(s)
+   e^{t^\top\gamma_b(s)+t^\top\Sigma_b(s)t/2}\,ds
+ +\sum_r\pi_r M_{q_r}(t).
+\]
+Both formulas are choices of $g$ in the master identity.
+
+\subsection{Marginal and Conditional Laws}
+Let $J$ be a nonempty proper subset of coordinate indices, put $Y=X_{-J}$,
+and write $T_J$ for projection onto $X_J$.
+
+\begin{proposition}[Marginal law]
+\label{prop:marginal}
+For arbitrary SFD kernels,
+\[
+ (T_J)_\#P_\theta
+  =\sum_a\pi_a\delta_{\xi_{a,J}}
+    +\sum_b\pi_b\int h_b(s)(T_J)_\#K_b(\cdot\mid s)\,ds
+    +\sum_r\pi_r(T_J)_\#Q_r.
+\]
+For Gaussian tubes, the projected branch kernel is
+$\Normal(\gamma_{b,J}(s),\Sigma_{b,JJ}(s))$. Exact branches instead use
+their projected pushforward laws, which may change dimension or acquire atoms.
+\end{proposition}
+\begin{proof}
+Evaluate the original law on $T_J^{-1}(A)$ for a measurable set $A$.
+Projection commutes with the finite sum and nonnegative kernel integral.
+The Gaussian assertion is the marginal formula for a multivariate normal.
+\end{proof}
+
+\begin{proposition}[Gaussian branch conditional law]
+\label{prop:gaussian-conditional}
+For a full-rank Gaussian branch kernel, conditional on $(Z=b,S=s,Y=y)$,
+$X_J$ is Gaussian with mean and covariance
+\begin{align*}
+ m_{J\mid-J,b}(s;y)
+ &=\gamma_{b,J}(s)+\Sigma_{b,J,-J}(s)\Sigma_{b,-J,-J}(s)^{-1}
+                         \{y-\gamma_{b,-J}(s)\},\\
+ V_{J\mid-J,b}(s)
+ &=\Sigma_{b,JJ}(s)-\Sigma_{b,J,-J}(s)
+            \Sigma_{b,-J,-J}(s)^{-1}\Sigma_{b,-J,J}(s).
+\end{align*}
+\end{proposition}
+\begin{proof}
+Positive definiteness makes the conditioning covariance block invertible.
+Completing the square in the joint Gaussian density gives the displayed
+mean and Schur-complement covariance.
+\end{proof}
+
+\begin{proposition}[Full conditional mixture]
+\label{prop:full-conditional}
+Choose a common projected reference $\nu_{-J}$ that dominates the projected
+component laws and, for each regularized branch, its projected slice laws.
+Let $g_{a,-J}$, $g_{b,-J}(y\mid s)$ and $g_{r,-J}$ be their densities
+relative to this same reference, and let $p_{\theta,-J}$ be the total density.
+For $P_{\theta,-J}$-almost every $y$ with positive density, put
+\[
+ \tau_a(y)=\frac{\pi_a g_{a,-J}(y)}{p_{\theta,-J}(y)},\qquad
+ \tau_b(s\mid y)=\frac{\pi_bh_b(s)g_{b,-J}(y\mid s)}{p_{\theta,-J}(y)},
+ \qquad
+ \tau_r(y)=\frac{\pi_r g_{r,-J}(y)}{p_{\theta,-J}(y)}.
+\]
+For regularized branches and exact atoms, the full conditional law is
+\begin{align*}
+ \Pbb(X_J\in A\mid Y=y)
+ &=\sum_a\tau_a(y)\mathbf 1_A(\xi_{a,J})\\
+ &\quad+\sum_b\int \tau_b(s\mid y)
+       K_{b,J\mid-J}(A\mid s,y)\,ds
+       +\sum_r\tau_r(y)Q_{r,J\mid-J}(A\mid y).
+\end{align*}
+For Gaussian tubes the branch conditional is given by
+Proposition~\ref{prop:gaussian-conditional}. Exact branches whose slice laws
+lack common domination use a posterior coordinate measure obtained by
+disintegration, rather than the displayed density relative to $ds$.
+\end{proposition}
+\begin{proof}
+Disintegrate the joint latent-observed law with respect to $Y$. The three
+Bayes numerators are its atom, branch-coordinate and residual contributions;
+their sum/integral is $p_{\theta,-J}$. They therefore normalize to one.
+Integrating each component's conditional law against these posterior weights
+gives the assertion. The exceptional set is projected-law null, as required
+for regular conditional distributions.
+\end{proof}
+
+For Gaussian slices under a mixed projected reference,
+$g_{b,-J}(y\mid s)=\phi_{d-|J|}\{y;\gamma_{b,-J}(s),
+\Sigma_{b,-J,-J}(s)\}\rho_{-J}(y)$, with
+$\rho_{-J}=d\lambda_{d-|J|}/d\nu_{-J}$. That conversion also applies to
+continuous residuals. Conditional simulation uses $\tau_b(s\mid y)$,
+whereas full-observation EM uses $\tau_b(s\mid x)$; they condition on
+different observations.
+
+\subsection{Special-Case Embeddings}
+\label{app:special-cases}
+\begin{proposition}[Special-case status]
+\label{prop:special-cases}
+The following restrictions give exact equalities of laws or estimators.
+\begin{enumerate}
+\item Atoms alone give finite discrete distributions. An atom and a specified
+continuous residual give the corresponding atom-inflated mixture.
+\item Residual-only SFDs contain normal, product, heavy-tailed and finite
+Gaussian-mixture laws by choosing the corresponding normalized $q_r$.
+\item A residual-only mixture of $n$ fixed data-centered Gaussian kernels
+with weights $1/n$ is exactly that KDE estimator.
+\item One Gaussian tube gives Proposition~\ref{prop:single-tube}; specified
+multiple tubes give mixtures of those laws. A Gaussian factor-analyzer
+distribution enters as its integrated residual Gaussian density.
+\item Exact kernels $\delta_{\gamma_b(s)}$ give coordinate-pushforward
+laws under an intrinsic or mixed reference, not ambient Lebesgue densities.
+\item A specified copula density with its marginal densities can be chosen
+as a residual law. This does not identify SFD itself as a copula construction.
+\end{enumerate}
+A learned metric or temporal/path-functional model is an adjacent connection
+until its extra structure is explicitly included in a normalized kernel or
+dynamic extension.
+\end{proposition}
+\begin{proof}
+Set inactive weights to zero and substitute the stated component laws in
+Definition~\ref{def:sfd}. Each retained law is normalized. The KDE assertion
+holds conditional on its chosen centers and bandwidth; it is an estimator
+equality, not an additional parametric generating model. The pushforward
+case is interpreted using Proposition~\ref{prop:mixed-density}. Extra
+metric or temporal structure is not implied by a static mixture restriction.
+\end{proof}

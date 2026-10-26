@@ -1,0 +1,151 @@
+rep,method,protocol_version,scenario,scenario_family,seed,n_train,n_test,heldout_log_score,fit_seconds,eval_seconds,status,error_message,converged
+0,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20261020,2160,540,-5.607246493850125,0.7724190420121886,0.02104737499030307,ok,mass-change heuristic stopping rule,True
+0,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20261020,2160,540,-6.426178866488154,0.0007846659864298999,0.00014712498523294926,ok,,True
+0,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20261020,2160,540,-5.638652601472575,0.06688941601896659,0.00043454201659187675,ok,,True
+0,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20261020,2160,540,-5.3993731330571695,0.06430658302269876,0.00016675001825205982,ok,,True
+0,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20261020,2160,540,-5.329405842025205,0.3947649170004297,0.0003047079953830689,ok,,True
+0,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20261020,2160,540,-5.403431137960157,0.03686262501287274,0.018658042012248188,ok,,True
+1,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20271020,2160,540,-5.613101833295794,0.8408972499892116,0.005635415989672765,ok,mass-change heuristic stopping rule,True
+1,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20271020,2160,540,-6.401962274438142,0.0001282920129597187,0.0001102499954868108,ok,,True
+1,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20271020,2160,540,-5.6295243761320135,0.01459262499702163,0.0001135829952545464,ok,,True
+1,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20271020,2160,540,-5.403873593564674,0.20380920899333432,0.00016183298430405557,ok,,True
+1,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20271020,2160,540,-5.3313843727193655,0.2680150000087451,0.0003020830044988543,ok,,True
+1,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20271020,2160,540,-5.397845870043649,0.03685112498351373,0.018820333993062377,ok,,True
+2,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20281020,2160,540,-5.641193840685069,0.8966547500167508,0.006053874996723607,ok,mass-change heuristic stopping rule,True
+2,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20281020,2160,540,-6.376089884504821,0.00013974998728372157,0.000159624993102625,ok,,True
+2,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20281020,2160,540,-5.568418338838767,0.015300458006095141,0.00013358399155549705,ok,,True
+2,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20281020,2160,540,-5.357901510595444,0.11608037500991486,0.0001889580162242055,ok,,True
+2,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20281020,2160,540,-5.328977279905866,0.4433239579957444,0.00022416599676944315,ok,,True
+2,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20281020,2160,540,-5.371391621242183,0.03653604199644178,0.018382375012151897,ok,,True
+3,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20291020,2160,540,-5.71377821079628,0.6605957089923322,0.006070208008168265,ok,mass-change heuristic stopping rule,True
+3,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20291020,2160,540,-6.4223886188099115,0.00012174999574199319,7.449998520314693e-05,ok,,True
+3,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20291020,2160,540,-5.631814029873227,0.016268457984551787,0.00012145799701102078,ok,,True
+3,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20291020,2160,540,-5.411687789315753,0.18513808300485834,0.00022666697623208165,ok,,True
+3,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20291020,2160,540,-5.360971644673504,0.30195412499597296,0.00021904200548306108,ok,,True
+3,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20291020,2160,540,-5.411343235719682,0.03697833401383832,0.018511374975787476,ok,,True
+4,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20301020,2160,540,-5.8794289175060515,0.8602635839779396,0.006147250009234995,ok,mass-change heuristic stopping rule,True
+4,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20301020,2160,540,-6.474092896576727,0.00012437498662620783,8.195801638066769e-05,ok,,True
+4,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20301020,2160,540,-5.745529657301747,0.01768745799199678,0.0001169589813798666,ok,,True
+4,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20301020,2160,540,-5.543005095066105,0.06881658299244009,0.00016737499390728772,ok,,True
+4,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20301020,2160,540,-5.486212450007351,0.2716255840205122,0.00031133400625549257,ok,,True
+4,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20301020,2160,540,-5.515579097911322,0.03691158298170194,0.01860241699614562,ok,,True
+5,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20311020,2160,540,-5.685364599232699,1.0594183329958469,0.0066545830050017685,ok,mass-change heuristic stopping rule,True
+5,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20311020,2160,540,-6.389973901414995,0.00011604200699366629,7.71670020185411e-05,ok,,True
+5,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20311020,2160,540,-5.6251812502296685,0.02035012500709854,0.00012179202167317271,ok,,True
+5,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20311020,2160,540,-5.379914640148003,0.11181983299320564,0.00016183400293812156,ok,,True
+5,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20311020,2160,540,-5.342246745330102,0.6489785000158008,0.0004063330125063658,ok,,True
+5,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20311020,2160,540,-5.397759244850632,0.03687616699608043,0.01857429201481864,ok,,True
+6,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20321020,2160,540,-5.836227831269665,0.7838247500185389,0.006095499993534759,ok,mass-change heuristic stopping rule,True
+6,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20321020,2160,540,-6.460269122572932,0.0001227080065291375,8.445899584330618e-05,ok,,True
+6,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20321020,2160,540,-5.66949476999521,0.017023749998770654,0.00012245899415574968,ok,,True
+6,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20321020,2160,540,-5.459243694516263,0.2097807909885887,0.00016229198081418872,ok,,True
+6,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20321020,2160,540,-5.422540841067211,0.25382745801471174,0.00037891700048930943,ok,,True
+6,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20321020,2160,540,-5.452376933371805,0.037047666002763435,0.01842754101380706,ok,,True
+7,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20331020,2160,540,-5.732405137722594,1.2938427090120967,0.006569209013832733,ok,mass-change heuristic stopping rule,True
+7,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20331020,2160,540,-6.438807229339365,0.0001219160039909184,8.654099656268954e-05,ok,,True
+7,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20331020,2160,540,-5.709688382855426,0.02022104201023467,0.00012270797742530704,ok,,True
+7,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20331020,2160,540,-5.42691931516296,0.1115048750070855,0.0002136249968316406,ok,,True
+7,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20331020,2160,540,-5.423374466543306,0.5869844170229044,0.000428917002864182,ok,,True
+7,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20331020,2160,540,-5.463198078162175,0.036493249994236976,0.018864417012082413,ok,,True
+8,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20341020,2160,540,-5.729254490349373,0.6953098330122884,0.006579582986887544,ok,mass-change heuristic stopping rule,True
+8,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20341020,2160,540,-6.398519534827636,0.0001230830093845725,8.854200132191181e-05,ok,,True
+8,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20341020,2160,540,-5.606186579787567,0.01853591701365076,0.00020354200387373567,ok,,True
+8,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20341020,2160,540,-5.362226391902326,0.1644213330000639,0.0002615830162540078,ok,,True
+8,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20341020,2160,540,-5.321948367619205,0.26698016599402763,0.00039204099448397756,ok,,True
+8,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20341020,2160,540,-5.397499745595633,0.036374582996359095,0.018526666011894122,ok,,True
+9,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20351020,2160,540,-5.820335793367048,1.439915666996967,0.006136500014690682,ok,mass-change heuristic stopping rule,True
+9,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20351020,2160,540,-6.364324312363432,0.00011991598876193166,7.991702295839787e-05,ok,,True
+9,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20351020,2160,540,-5.620069750656932,0.015950875007547438,0.00011258301674388349,ok,,True
+9,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20351020,2160,540,-5.391595079005252,0.06351179198827595,0.0001600419927854091,ok,,True
+9,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20351020,2160,540,-5.33198645538561,0.5981660420075059,0.0003047920181415975,ok,,True
+9,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20351020,2160,540,-5.387240336071882,0.03672837500926107,0.018471874995157123,ok,,True
+10,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20361020,2160,540,-5.716434902503702,0.8152148750086781,0.004823124996619299,ok,mass-change heuristic stopping rule,True
+10,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20361020,2160,540,-6.4345323618324155,0.0001356670109089464,0.0001057499903254211,ok,,True
+10,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20361020,2160,540,-5.613849902181445,0.013283125008456409,0.00011274998541921377,ok,,True
+10,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20361020,2160,540,-5.391973761661924,0.2400074999895878,0.00016016699373722076,ok,,True
+10,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20361020,2160,540,-5.350642732771432,0.5872989170020446,0.00035766599467024207,ok,,True
+10,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20361020,2160,540,-5.397055812868792,0.04317408398492262,0.018722917011473328,ok,,True
+11,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20371020,2160,540,-5.804121183705904,2.1929025840072427,0.0064102500036824495,ok,mass-change heuristic stopping rule,True
+11,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20371020,2160,540,-6.416515768043517,0.00012224999954923987,7.745900074951351e-05,ok,,True
+11,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20371020,2160,540,-5.669139282965047,0.01569212501635775,0.00011362499208189547,ok,,True
+11,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20371020,2160,540,-5.431635941689582,0.07380091599770822,0.0001532500027678907,ok,,True
+11,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20371020,2160,540,-5.409870516591508,0.6067807499784976,0.0003422499867156148,ok,,True
+11,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20371020,2160,540,-5.44976207378671,0.037246207997668535,0.020718500018119812,ok,,True
+12,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20381020,2160,540,-5.7084924400132895,1.7606315839802846,0.0053196670196484774,ok,mass-change heuristic stopping rule,True
+12,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20381020,2160,540,-6.44337202373028,0.00012120898463763297,8.024999988265336e-05,ok,,True
+12,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20381020,2160,540,-5.6299104873981864,0.014899708010489121,0.0001204590080305934,ok,,True
+12,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20381020,2160,540,-5.3988044921096785,0.15466491697588935,0.00016087497351691127,ok,,True
+12,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20381020,2160,540,-5.3214644895689505,0.4698508750007022,0.00022149999858811498,ok,,True
+12,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20381020,2160,540,-5.374730760188415,0.036615916993469,0.018531792011344805,ok,,True
+13,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20391020,2160,540,-5.808359836302693,1.4018266659986693,0.00571170897455886,ok,mass-change heuristic stopping rule,True
+13,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20391020,2160,540,-6.426273206993786,0.00011929200263693929,8.566598990000784e-05,ok,,True
+13,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20391020,2160,540,-5.609544978186378,0.017154291999759153,0.00012158299796283245,ok,,True
+13,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20391020,2160,540,-5.376031887386281,0.10011962498538196,0.00016250001499429345,ok,,True
+13,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20391020,2160,540,-5.33345545785408,0.40787308299331926,0.0002379999787081033,ok,,True
+13,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20391020,2160,540,-5.395472200476631,0.03630833301576786,0.01843612498487346,ok,,True
+14,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20401020,2160,540,-5.775980897500168,0.7297526670154184,0.005272415990475565,ok,mass-change heuristic stopping rule,True
+14,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20401020,2160,540,-6.442128744015065,0.00011970801278948784,8.354199235327542e-05,ok,,True
+14,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20401020,2160,540,-5.658469213312345,0.01422420798917301,0.00017066599684767425,ok,,True
+14,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20401020,2160,540,-5.4376397223116175,0.16422737500397488,0.00015820801490917802,ok,,True
+14,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20401020,2160,540,-5.385272832776393,0.4643591250060126,0.000385833001928404,ok,,True
+14,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20401020,2160,540,-5.430591939694627,0.03754937500343658,0.018924125004559755,ok,,True
+15,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20411020,2160,540,-5.8198245142770535,0.9102086669881828,0.006061291991500184,ok,mass-change heuristic stopping rule,True
+15,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20411020,2160,540,-6.410165378876824,0.0001152500044554472,6.587497773580253e-05,ok,,True
+15,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20411020,2160,540,-5.619323608094011,0.01916745799826458,0.00011037502554245293,ok,,True
+15,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20411020,2160,540,-5.388110545786297,0.2007815419929102,0.00015087498468346894,ok,,True
+15,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20411020,2160,540,-5.362035068545491,0.4930248750024475,0.00021683299564756453,ok,,True
+15,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20411020,2160,540,-5.388719600062659,0.03583191701909527,0.018366915988735855,ok,,True
+16,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20421020,2160,540,-5.764086752171668,1.7403427500103135,0.004794750013388693,ok,mass-change heuristic stopping rule,True
+16,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20421020,2160,540,-6.3774365203344585,0.00012424998567439616,7.79579859226942e-05,ok,,True
+16,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20421020,2160,540,-5.607636461725571,0.013610834022983909,0.00011408299906179309,ok,,True
+16,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20421020,2160,540,-5.361697004787377,0.08462029200745746,0.00016929101548157632,ok,,True
+16,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20421020,2160,540,-5.315286067500177,0.5765420000243466,0.00046116698649711907,ok,,True
+16,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20421020,2160,540,-5.383044827825444,0.03622633300255984,0.01836304200696759,ok,,True
+17,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20431020,2160,540,-5.945503304120664,0.8060285829997156,0.005402083013905212,ok,mass-change heuristic stopping rule,True
+17,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20431020,2160,540,-6.486771808369748,0.0001227080065291375,8.958301623351872e-05,ok,,True
+17,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20431020,2160,540,-5.754797103080547,0.016853833018103614,0.0001219160039909184,ok,,True
+17,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20431020,2160,540,-5.480536997649572,0.09902983400388621,0.00016066600801423192,ok,,True
+17,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20431020,2160,540,-5.412824801419771,0.5325436250132043,0.0006567079981323332,ok,,True
+17,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20431020,2160,540,-5.4887450402942655,0.0363319999887608,0.01853650002158247,ok,,True
+18,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20441020,2160,540,-5.8229451933514715,0.8403072920045815,0.005717041000025347,ok,mass-change heuristic stopping rule,True
+18,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20441020,2160,540,-6.430459025501244,0.00011808300041593611,8.254099520854652e-05,ok,,True
+18,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20441020,2160,540,-5.643932033581416,0.015063625003676862,0.00012749998131766915,ok,,True
+18,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20441020,2160,540,-5.406002745000638,0.15735133297857828,0.0001610000035725534,ok,,True
+18,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20441020,2160,540,-5.362951091220057,0.4849779169890098,0.00026725002680905163,ok,,True
+18,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20441020,2160,540,-5.433375450026782,0.04303599998820573,0.0187937909795437,ok,,True
+19,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20451020,2160,540,-5.7302568996650916,0.8087962919962592,0.006126624997705221,ok,mass-change heuristic stopping rule,True
+19,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20451020,2160,540,-6.4442918173685655,0.00012049998622387648,8.387499838136137e-05,ok,,True
+19,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20451020,2160,540,-5.645082869662686,0.018268707994138822,0.00012129201786592603,ok,,True
+19,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20451020,2160,540,-5.392251976257918,0.13843691698275506,0.00016112500452436507,ok,,True
+19,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20451020,2160,540,-5.350430734050478,0.5788312499935273,0.0007488330011256039,ok,,True
+19,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20451020,2160,540,-5.410343142757234,0.03694495899253525,0.01868241699412465,ok,,True
+20,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20461020,2160,540,-5.883003886408457,0.6495825829915702,0.006262792012421414,ok,mass-change heuristic stopping rule,True
+20,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20461020,2160,540,-6.451594703659502,0.00011533399811014533,7.074998575262725e-05,ok,,True
+20,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20461020,2160,540,-5.680389551592856,0.014275708992499858,0.00011529200128279626,ok,,True
+20,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20461020,2160,540,-5.459663889012172,0.07930762501200661,0.00015862498548813164,ok,,True
+20,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20461020,2160,540,-5.394503666037456,0.3634336249961052,0.0003415409883018583,ok,,True
+20,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20461020,2160,540,-5.450829626513493,0.035898667003493756,0.018329915998037905,ok,,True
+21,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20471020,2160,540,-5.862970008609806,0.9253037919988856,0.006496874993899837,ok,mass-change heuristic stopping rule,True
+21,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20471020,2160,540,-6.396763059012668,0.00011941700358875096,8.399999933317304e-05,ok,,True
+21,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20471020,2160,540,-5.740539101152414,0.01484258400159888,0.00011612498201429844,ok,,True
+21,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20471020,2160,540,-5.509892987902598,0.1886305829975754,0.00016458402387797832,ok,,True
+21,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20471020,2160,540,-5.4339955264363775,0.3268742500222288,0.0003501659957692027,ok,,True
+21,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20471020,2160,540,-5.483399407572187,0.03657133298111148,0.018469916976755485,ok,,True
+22,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20481020,2160,540,-5.855405006473604,1.7014099159860052,0.006959249993087724,ok,mass-change heuristic stopping rule,True
+22,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20481020,2160,540,-6.419111989731989,0.00011804202222265303,8.079200051724911e-05,ok,,True
+22,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20481020,2160,540,-5.667238171965036,0.021904833003645763,0.00012083299225196242,ok,,True
+22,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20481020,2160,540,-5.459214964015242,0.07731741599855013,0.00017970800399780273,ok,,True
+22,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20481020,2160,540,-5.394458222085984,0.6566440419992432,0.000491165992571041,ok,,True
+22,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20481020,2160,540,-5.4621571593544145,0.04590029100654647,0.0186798750073649,ok,,True
+23,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20491020,2160,540,-5.824632780058672,0.7417825000011362,0.006015874998411164,ok,mass-change heuristic stopping rule,True
+23,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20491020,2160,540,-6.4317118002478475,0.00011629200889728963,8.179101860150695e-05,ok,,True
+23,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20491020,2160,540,-5.6965275393071,0.017899875005241483,0.00012608402175828815,ok,,True
+23,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20491020,2160,540,-5.431617877131987,0.15569604199845344,0.0001846670056693256,ok,,True
+23,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20491020,2160,540,-5.381118264635431,0.40912591700907797,0.0004228750185575336,ok,,True
+23,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20491020,2160,540,-5.442285499276467,0.03670066600898281,0.018511166010284796,ok,,True
+24,MST SFD,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20501020,2160,540,-5.668373213027365,0.899617582996143,0.004653042007703334,ok,mass-change heuristic stopping rule,True
+24,Gaussian,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20501020,2160,540,-6.389263178745055,0.0005259159952402115,0.0001939999929163605,ok,,True
+24,GMM-2,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20501020,2160,540,-5.5323777597752315,0.014500999997835606,0.00011520797852426767,ok,,True
+24,GMM-4,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20501020,2160,540,-5.318685190678075,0.13402612498612143,0.00015516599523834884,ok,,True
+24,GMM-8,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20501020,2160,540,-5.284656335160705,0.35261712499777786,0.00032345898216590285,ok,,True
+24,KDE,pbmc_inductive_marker_holdout_v2,pbmc3k_inductive_pca2,marker_excluded_train_only_pca,20501020,2160,540,-5.329737129757356,0.0367986669880338,0.018546792009146884,ok,,True

@@ -1,0 +1,29 @@
+Figure sources and third-party rights
+
+The Elvis pose in Figure 1 was reconstructed from a reference performance
+photograph supplied by the author. The photograph itself is not included.
+Photographer, exact source and publication-use permission are unverified.
+The figure is a synthetic density illustration, not a photograph or an
+estimate of a real population distribution. Its construction is documented
+in the manuscript's figure-construction appendix.
+
+The synthetic face in Figure 5b and the additional 3D face example are
+Doraemon-inspired. Generating them in code does not establish permission
+to license third-party character elements. No endorsement is implied.
+
+These affected elements are excluded from the author's CC BY 4.0 grant.
+No photographic or character-use permission was obtained, requested or
+paid for in preparing this replacement draft. Exclusion from CC BY is not
+a substitute for permission or another applicable public-use basis.
+
+Document styles
+
+The unmodified TMLR style distribution originates from:
+https://github.com/JmlrOrg/tmlr-style-file
+The upstream Apache-2.0 LICENSE is preserved as LICENSE in this archive.
+
+The bundled fancyhdr.sty retains its LaTeX Project Public License
+1.3-or-later notice and Pieter van Oostrum copyright notice.
+The bundled tmlr.bst retains its LaTeX Project Public License notice and
+Patrick W Daly / Hal Daume III / modification credits. See the original
+file headers for the full notices and applicable terms.

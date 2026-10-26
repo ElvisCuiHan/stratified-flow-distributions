@@ -1,0 +1,20 @@
+Manuscript license and exclusions
+
+Elvis Han Cui authorizes the author-authored manuscript text and original
+scientific material under Creative Commons Attribution 4.0 International:
+https://creativecommons.org/licenses/by/4.0/
+
+This grant does not cover third-party rights in:
+- Figure 1 and figures/elvis_sfd_four_panel.pdf: photo-derived Elvis pose;
+- Figure 5b within figures/specified_density_surfaces.pdf: Doraemon-inspired
+  recognizable-character geometry;
+- figures/face_example_3d.pdf: the additional Doraemon-inspired example.
+
+No permission to reuse the underlying photographic or character elements
+is granted by this archive. The exclusions apply to the affected elements
+in the PDF and compilation sources. Names do not imply endorsement.
+Third-party document styles retain their separate Apache/LPPL notices.
+
+Preparing or uploading this draft does not establish the public-use basis
+for the excluded elements. Publication remains subject to the author's
+separate review and final confirmation.

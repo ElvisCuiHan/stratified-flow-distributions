@@ -1,0 +1,48 @@
+\section{Related Work}
+\label{sec:related-work}
+
+\paragraph{Density models and geometric mixtures.}
+Finite mixtures and KDE model ambient densities
+\citep{mclachlan2000finite,silverman1986density}. Normalizing flows,
+score-based diffusion and flow matching extend this toolkit through learned
+transformations or vector fields
+\citep{papamakarios2021normalizing,song2021score,lipman2023flow}; copulas
+separate marginal laws from dependence \citep{nelsen2006copulas}.
+These normalized families can supply SFD residuals or observation kernels.
+The SFD specification additionally names the component masses, internal
+coordinate laws and reference measures.
+
+Generative topographic mapping (GTM) combines a smooth latent map,
+Gaussian observation kernels, EM fitting and posterior coordinates, and
+discusses mixtures of maps and learnable node probabilities
+\citep{bishop1998gtm}. Finite Gaussian SFDs share this kernel-mixture
+structure. Our analysis concerns the grouping of nodes into branch-mass
+targets and the effects of occupancy and noise constraints on those targets.
+A generic mixture supplied with the same grouping can estimate the same
+mass, which motivates matching the grouping in a comparison.
+
+\paragraph{Geometry and trajectory models.}
+Principal curves, Isomap and diffusion maps summarize low-dimensional
+structure \citep{hastie1989principal,tenenbaum2000isomap,coifman2006diffusion};
+manifold estimation studies its recovery under noise
+\citep{genovese2012manifold}. Pseudotime and optimal-transport methods organize
+single-cell observations along developmental progressions
+\citep{trapnell2014dynamics,schiebinger2019optimal}.
+These geometric summaries can motivate a declared skeleton. A probability
+law on that skeleton also specifies longitudinal occupancy, observation
+noise and residual mass. LAND uses a learned Riemannian metric to define
+locally adaptive normal laws \citep{arvanitidis2016land}, while Riemannian
+continuous flows define distributions through manifold-valued dynamics
+\citep{mathieu2020riemannian}. Their metric and volume conventions must be
+retained when such laws are used as mixture components.
+
+\paragraph{Stratified spaces and inference.}
+Tree space provides a geometric setting for observations with different
+combinatorial types \citep{billera2001geometry}. Sticky limit theorems on
+open books show how singular geometry can alter mean asymptotics
+\citep{hotz2013sticky}. In SFD, observations lie in an ambient space and
+the mixture allocates mass to embedded atoms, exact strata, noisy tubes and
+residuals. A common dominating measure makes their likelihood contributions
+comparable. The fixed-chart result below uses regular likelihood theory;
+its conditions distinguish that setting from moving singular supports and
+boundary models \citep{vandervaart1998asymptotic}.

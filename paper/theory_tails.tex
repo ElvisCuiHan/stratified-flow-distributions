@@ -1,0 +1,82 @@
+\section{Tube-Distance Concentration}
+\label{app:tube-tails}
+This result isolates the probability of leaving a declared tube from the
+geometric distance estimate used to define that tube. In particular, a
+positive reach condition alone is not a derivation of a residual bound.
+
+\begin{proposition}[Tube-distance concentration from residual tails]
+\label{prop:tube-concentration}
+Let $\Gamma_b=\gamma_b(\mathcal S_b)$ and
+$d_{\Gamma_b}(x)=\inf_{y\in\Gamma_b}\|x-y\|$. On a measurable coordinate
+subset $U_b$ of positive branch-coordinate probability, suppose the observation is
+$X=\gamma_b(S)+t_b(S)\varepsilon_{\parallel,b}
++N_b(S)\varepsilon_{\perp,b}$. Let
+$0<M_{N,b}=\sup_{s\in U_b}\|N_b(s)\|_{\mathrm{op}}<\infty$.
+Assume a nonnegative measurable remainder $R_b$ and radius $\rho_b>0$
+satisfy
+\[
+ d_{\Gamma_b}(X)\le M_{N,b}\|\varepsilon_{\perp,b}\|+R_b
+ \quad\text{whenever }S\in U_b\text{ and }
+ M_{N,b}\|\varepsilon_{\perp,b}\|+R_b<\rho_b.
+\]
+For $0<r<\rho_b$ and $0<\eta<1$, set $a=(1-\eta)r/M_{N,b}$ and
+\begin{align*}
+ \Delta_b(r,\eta)
+ &=\Pbb(S\notin U_b\mid Z=b)\\
+ &\quad+\operatorname*{ess\,sup}_{s\in U_b}
+          \Pbb(\|\varepsilon_{\perp,b}\|>a\mid S=s,Z=b)\\
+ &\quad+\operatorname*{ess\,sup}_{s\in U_b}
+          \Pbb(R_b>\eta r\mid S=s,Z=b).
+\end{align*}
+Essential suprema use the branch-coordinate law. Then
+\[
+ \Pbb\{d_{\Gamma_b}(X)>r\mid Z=b\}\le\Delta_b(r,\eta).
+\]
+For $n_b$ observations conditional on branch $b$, the probability that at
+least one leaves the radius-$r$ tube is at most $n_b\Delta_b(r,\eta)$.
+For $n$ draws from the mixture and an active branch subset $\mathcal B_0$,
+\[
+ \Pbb\{\exists i:Z_i\in\mathcal B_0,
+                  d_{\Gamma_{Z_i}}(X_i)>r\}
+       \le n\sum_{b\in\mathcal B_0}\pi_b\Delta_b(r,\eta).
+\]
+\end{proposition}
+\begin{proof}
+If $S\in U_b$, $\|\varepsilon_{\perp,b}\|\le a$ and $R_b\le\eta r$,
+the assumed bound is at most $r<\rho_b$. The escape event is therefore
+contained in the union of the three complement events in $\Delta_b$.
+Conditioning on $S$ and applying the union bound proves the first assertion.
+Union bounds over observations and then mixture labels give the other two.
+They do not require independence beyond the stated one-observation laws.
+\end{proof}
+
+\begin{corollary}[Gaussian residual-tail specialization]
+\label{cor:gaussian-tube-tail}
+In Proposition~\ref{prop:tube-concentration}, suppose conditionally on $S=s$
+that $\varepsilon_{\perp,b}=A_b(s)G$ with
+$G\sim\Normal(0,I_{r_b^{\varepsilon}})$. Set
+\[
+ \bar m_b=\operatorname*{ess\,sup}_{s\in U_b}\E\|A_b(s)G\|,
+ \qquad
+ \bar\sigma_b=\operatorname*{ess\,sup}_{s\in U_b}\|A_b(s)\|_{\mathrm{op}}.
+\]
+If $0<\bar\sigma_b<\infty$, the normal-residual term in $\Delta_b$ is
+bounded by
+\[
+ \exp\left\{-\frac{(a-\bar m_b)_+^2}{2\bar\sigma_b^2}\right\}.
+\]
+If $\bar\sigma_b=0$, that term is zero for $a>0$.
+\end{corollary}
+\begin{proof}
+For fixed $s$, the Gaussian function $g\mapsto\|A_b(s)g\|$ is
+$\|A_b(s)\|_{\mathrm{op}}$-Lipschitz. Gaussian Lipschitz concentration
+\citep{boucheron2013concentration} bounds its upper tail above its mean
+by $\exp\{-t^2/(2\|A_b(s)\|_{\mathrm{op}}^2)\}$ for $t\ge0$.
+Use the trivial bound one when $a$ is below the mean, otherwise take
+$t=a-\E\|A_b(s)G\|$. Uniform bounds on the mean and Lipschitz constant
+give the display. Zero operator norm gives zero residual almost surely.
+\end{proof}
+
+Other observation kernels enter the same first proposition through their
+own residual tails. It is the kernel law and the assumed geometric remainder,
+not the name of the mixture family, that determine concentration.

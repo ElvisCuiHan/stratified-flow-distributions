@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowdistribution"
+version = "0.1.0"
+description = "Stratified probability laws and reproducible mixed-support density experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Elvis Han Cui"}]
+dependencies = ["numpy>=1.23", "scipy>=1.10"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+reproduce = ["numpy>=1.23,<2", "scipy>=1.10,<1.14", "matplotlib>=3.7", "scikit-learn>=1.4,<1.5", "Pillow>=10", "scikit-image>=0.22", "pypdf>=4"]
+test = ["pytest>=7"]
+
+[project.urls]
+Repository = "https://github.com/ElvisCuiHan/stratified-flow-distributions"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "scripts"]

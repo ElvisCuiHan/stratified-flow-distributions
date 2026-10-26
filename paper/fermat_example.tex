@@ -1,0 +1,33 @@
+\subsection{A Projected Fermat-Quintic Section}
+\label{app:fermat-construction}
+The Fermat quintic
+$\mathcal Q=\{\sum_{j=0}^4z_j^5=0\}\subset\mathbb{CP}^4$
+is a standard Calabi--Yau example \citep{hendi2024invariant}.
+Fixing projective coordinates $[-1:z_1:z_2:0:0]$ selects the affine curve
+$z_1^5+z_2^5=1$, of two real dimensions. For $w=u+iv$, put
+\begin{equation}
+ \begin{split}
+ z_1&=e^{2\pi i k/5}(\sin w)^{2/5},\qquad
+ z_2=e^{2\pi i \ell/5}(\cos w)^{2/5},\\
+ F(u,v;k,\ell)&=\bigl(\operatorname{Re}z_1,\operatorname{Re}z_2,
+              (\operatorname{Im}z_1+\operatorname{Im}z_2)/\sqrt2\bigr),
+ \end{split}
+ \label{eq:fermat-projection}
+\end{equation}
+where $k,\ell\in\{0,\ldots,4\}$ and the powers use the principal complex
+logarithm. Since $\sin^2w+\cos^2w=1$, every generated pair satisfies the
+section equation. Figure~\ref{fig:fermat-section} plots $F$ on
+$u\in[0.025,\pi/2-0.025]$, $v\in[-1,1]$.
+
+The observation law uses 13 equally spaced fixed values of $v$ for each of
+the 25 root pairs. Each resulting curve has uniform $u$, mass $1/325$ and
+Gaussian covariance $0.035^2I_3$. Thus an SFD with one-dimensional coordinate
+domains supplies a finite-curve approximation to the projected patches.
+Its full-rank observation law is defined in $\R^3$; its latent sampling rule
+is a coordinate-grid mixture rather than Calabi--Yau volume. The example
+concerns a projected section, not the full six-real-dimensional manifold or
+its Ricci-flat metric.
+
+In Figure~\ref{fig:fermat-section}, colors identify the first root index
+$k$. The smooth patch display uses continuous $v$, while its observation
+law uses the finite grid described above.

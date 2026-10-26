@@ -1,0 +1,32 @@
+protocol_version,scenario,scenario_family,method,mean_heldout_log_score,se_heldout_log_score,rank_within_scenario,mean_fit_seconds,mean_eval_seconds,reps,failure_rate,warning_rate
+jmlr_frozen_benchmark_v1,banana_2d,external_classical_full_dimensional,GMM-16,-2.6303268405313203,0.00914807453890235,5,0.08298191658686846,0.0010247334372252225,5,0.0,1.0
+jmlr_frozen_benchmark_v1,banana_2d,external_classical_full_dimensional,GMM-2,-2.6254577522853024,0.012914009966247154,4,0.010757624614052474,0.0001592583954334259,5,0.0,0.6
+jmlr_frozen_benchmark_v1,banana_2d,external_classical_full_dimensional,GMM-4,-2.6166439264719465,0.008920846894798272,2,0.023504758160561322,0.00030309183057397604,5,0.0,1.0
+jmlr_frozen_benchmark_v1,banana_2d,external_classical_full_dimensional,GMM-8,-2.620283803378615,0.009852004739036753,3,0.046877799974754455,0.0005223582033067941,5,0.0,1.0
+jmlr_frozen_benchmark_v1,banana_2d,external_classical_full_dimensional,Gaussian,-2.6625445013148026,0.010206672275441024,7,0.00021440822165459396,0.00010520003270357847,5,0.0,0.0
+jmlr_frozen_benchmark_v1,banana_2d,external_classical_full_dimensional,KDE,-2.632166872454202,0.00979942950467707,6,0.00013420840259641408,0.021701658586971463,5,0.0,0.0
+jmlr_frozen_benchmark_v1,banana_2d,external_classical_full_dimensional,Oracle DGP,-2.6091219906852468,0.010686938900013635,1,0.0,0.00011751698330044746,5,0.0,0.0
+jmlr_frozen_benchmark_v1,gaussian_mixture_20d,external_classical_full_dimensional,GMM-16,-24.144538776081088,0.19700692889041338,6,0.836785233183764,0.0047522420063614845,5,0.0,1.0
+jmlr_frozen_benchmark_v1,gaussian_mixture_20d,external_classical_full_dimensional,GMM-2,-21.458521266120712,0.07754000579073203,2,0.08197446679696441,0.0010842999676242472,5,0.0,0.2
+jmlr_frozen_benchmark_v1,gaussian_mixture_20d,external_classical_full_dimensional,GMM-4,-21.538139333165063,0.11497608735010709,3,0.150628791609779,0.0022147584008052946,5,0.0,0.8
+jmlr_frozen_benchmark_v1,gaussian_mixture_20d,external_classical_full_dimensional,GMM-8,-22.17720378003658,0.23497635602674355,4,0.41046436664182695,0.010600249818526208,5,0.0,1.0
+jmlr_frozen_benchmark_v1,gaussian_mixture_20d,external_classical_full_dimensional,Gaussian,-22.313541248473975,0.06814403609408431,5,0.0001808752305805683,0.00031566680409014227,5,0.0,0.0
+jmlr_frozen_benchmark_v1,gaussian_mixture_20d,external_classical_full_dimensional,Oracle DGP,-20.321271772276404,0.06322359133818109,1,0.0,0.007108099991455674,5,0.0,0.0
+jmlr_frozen_benchmark_v1,mvnormal_correlated_10d,external_classical_full_dimensional,GMM-16,-13.061068989017084,0.04521899497027131,6,0.13535493344534189,0.0018176417797803879,5,0.0,1.0
+jmlr_frozen_benchmark_v1,mvnormal_correlated_10d,external_classical_full_dimensional,GMM-2,-12.06804104738914,0.026876975505744215,3,0.037658408563584087,0.0002670084126293659,5,0.0,1.0
+jmlr_frozen_benchmark_v1,mvnormal_correlated_10d,external_classical_full_dimensional,GMM-4,-12.172472087821527,0.03811875919924233,4,0.043075766786932944,0.0011452833656221627,5,0.0,1.0
+jmlr_frozen_benchmark_v1,mvnormal_correlated_10d,external_classical_full_dimensional,GMM-8,-12.434739916244526,0.04284778853628541,5,0.10497852463740856,0.0010457333875820041,5,0.0,1.0
+jmlr_frozen_benchmark_v1,mvnormal_correlated_10d,external_classical_full_dimensional,Gaussian,-12.009395411340584,0.0278837225981975,2,0.00015930822119116783,0.0002487247809767723,5,0.0,0.0
+jmlr_frozen_benchmark_v1,mvnormal_correlated_10d,external_classical_full_dimensional,Oracle DGP,-11.983111374649635,0.030300699191349485,1,0.0,0.0003436831990256906,5,0.0,0.0
+jmlr_frozen_benchmark_v1,skew_mixture_10d,external_classical_full_dimensional,GMM-16,-11.71403129125679,0.09326809746356464,6,0.11865697521716356,0.0018152249744161964,5,0.0,1.0
+jmlr_frozen_benchmark_v1,skew_mixture_10d,external_classical_full_dimensional,GMM-2,-11.130978032235738,0.05772914101261151,4,0.010017883009277284,0.0002443667268380523,5,0.0,0.2
+jmlr_frozen_benchmark_v1,skew_mixture_10d,external_classical_full_dimensional,GMM-4,-10.736860950943207,0.033044925466714836,2,0.02900798318441957,0.00043649161234498023,5,0.0,0.8
+jmlr_frozen_benchmark_v1,skew_mixture_10d,external_classical_full_dimensional,GMM-8,-11.069921575512302,0.07389879109586825,3,0.06180480858311057,0.0007994750048965216,5,0.0,1.0
+jmlr_frozen_benchmark_v1,skew_mixture_10d,external_classical_full_dimensional,Gaussian,-11.583460091545533,0.04377641203899473,5,9.913321118801833e-05,0.00010999199002981186,5,0.0,0.0
+jmlr_frozen_benchmark_v1,skew_mixture_10d,external_classical_full_dimensional,Oracle DGP,-10.577817328241323,0.022705560560584592,1,0.0,0.0004252332262694836,5,0.0,0.0
+jmlr_frozen_benchmark_v1,student_t_10d,external_classical_full_dimensional,GMM-16,-17.914668730153938,0.24963920363079062,6,0.14799518357031047,0.0016122834058478475,5,0.0,1.0
+jmlr_frozen_benchmark_v1,student_t_10d,external_classical_full_dimensional,GMM-2,-16.149452164955044,0.08440125176264535,2,0.009129991591908037,0.0002521750051528215,5,0.0,0.0
+jmlr_frozen_benchmark_v1,student_t_10d,external_classical_full_dimensional,GMM-4,-16.27770875800996,0.11867347415323136,3,0.04493902479298413,0.0008278083987534046,5,0.0,0.4
+jmlr_frozen_benchmark_v1,student_t_10d,external_classical_full_dimensional,GMM-8,-16.62118889446613,0.15297460327082466,4,0.12686753342859447,0.0016190749825909733,5,0.0,1.0
+jmlr_frozen_benchmark_v1,student_t_10d,external_classical_full_dimensional,Gaussian,-17.337954051185186,0.15436576786326264,5,0.00011204201728105545,0.001598258363083005,5,0.0,0.0
+jmlr_frozen_benchmark_v1,student_t_10d,external_classical_full_dimensional,Oracle DGP,-15.817059566594171,0.06632690925283365,1,0.0,0.0046570914098992945,5,0.0,0.0

@@ -1,0 +1,130 @@
+\section{Finite-Grid Optimization and Approximation}
+\label{app:numerical-theory}
+\subsection{Proof of Fixed-Quadrature GEM Monotonicity}
+For Proposition~\ref{prop:gem}, write $p_\theta(x,z)$ for the normalized
+finite-grid joint density and $r_i(z)=p_{\theta^{\mathrm{old}}}(x_i,z)/
+p_{\theta^{\mathrm{old}}}(x_i)$ for the old posterior. On labels with
+$r_i(z)>0$, Jensen's inequality gives
+\[
+ \log p_\theta(x_i)\ge
+  \sum_{z:r_i(z)>0}r_i(z)\log\frac{p_\theta(x_i,z)}{r_i(z)}.
+\]
+The bound is exact at the old iterate. Summing and subtracting the fixed
+penalty gives $F_n(\theta)\ge Q(\theta\mid\theta^{\mathrm{old}})
+-\operatorname{Pen}(\theta)+\sum_i\operatorname{Ent}(r_i)$.
+The entropy is constant during the step. A nondecreasing penalized $Q$
+therefore implies a nondecreasing observed objective. Zero old posterior
+terms use $0\log0=0$; a proposed zero likelihood on a positive old posterior
+cannot improve a finite auxiliary objective. The branch-node term uses
+$\log\kappa_{bm}=\log w_{bm}+\log h_b(s_{bm})-\log C_b$ throughout.
+Changing the grid or dropping its normalizer changes this argument's
+objective and is not covered by the proposition.
+
+\subsection{Numerical Likelihood and Root-n Inference}
+\begin{proposition}[Transfer from a numerical likelihood]
+\label{prop:numerical-transfer}
+Under Theorem~\ref{thm:regular-finite-sfd}, let $\hat\theta_n$ be its
+consistent interior exact-likelihood maximizer, and let $\tilde\theta_n$
+be consistent for the same target under a differentiable numerical criterion
+$\tilde\ell_n$. On a fixed neighborhood $N$ of $\theta_0$, assume
+\[
+ \|\nabla\tilde\ell_n(\tilde\theta_n)\|=o_p(\sqrt n),\qquad
+ \sup_{\theta\in N}\|\nabla\tilde\ell_n(\theta)
+                           -\nabla\ell_n(\theta)\|=o_p(\sqrt n).
+\]
+Then $\sqrt n(\tilde\theta_n-\hat\theta_n)=o_p(1)$. If also
+\[
+ \sup_{\theta\in N}n^{-1}\|\nabla^2\tilde\ell_n(\theta)
+                           -\nabla^2\ell_n(\theta)\|=o_p(1),
+\]
+then $-n^{-1}\nabla^2\tilde\ell_n(\tilde\theta_n)\to_p I_0$.
+\end{proposition}
+\begin{proof}
+The two score conditions give $\nabla\ell_n(\tilde\theta_n)=o_p(\sqrt n)$.
+Subtract the zero exact score at $\hat\theta_n$ and integrate the exact
+Hessian along their joining segment. Consistency and the local envelope
+argument in Appendix~\ref{app:regular-theory} make that Hessian divided by
+$n$ tend to $-I_0$. Inverting the score difference proves the estimator
+claim. The additional Hessian discrepancy gives the information claim.
+\end{proof}
+
+The rates matter even for normalized densities. In the residual-only normal
+submodel, take $p_\theta(x)=\phi_1(x;\theta,1)$ and
+$\tilde p_{n,\theta}(x)=\phi_1(x;\theta+\epsilon_n,1)$ with
+$\epsilon_n=n^{-1/4}$. Under iid $\Normal(0,1)$ data, the average criterion
+difference vanishes uniformly on compact parameter sets, average scores
+differ by $-\epsilon_n\to0$, and Hessians agree. Yet
+$\tilde\theta_n-\hat\theta_n=-\epsilon_n$ and its root-$n$ multiple diverges.
+Transfer to the continuous law requires average score error
+$o_p(n^{-1/2})$, not just $o_p(1)$. A fixed normalized grid can instead be
+treated as the statistical model in its own right.
+
+\subsection{Mixture and Responsibility Perturbations}
+\begin{proposition}[Mixture stability on a fixed stratum set]
+\label{prop:mixture-stability}
+Let $Q=\sum_c\pi_cQ_c$ and $\tilde Q=\sum_c\tilde\pi_c\tilde Q_c$ have
+the same finite component index set. For
+$d_{\mathrm{TV}}(P,Q)=\sup_A|P(A)-Q(A)|$,
+\[
+ d_{\mathrm{TV}}(Q,\tilde Q)\le
+ \tfrac12\sum_c|\pi_c-\tilde\pi_c|
+ +\sum_c(\pi_c\wedge\tilde\pi_c)d_{\mathrm{TV}}(Q_c,\tilde Q_c).
+\]
+If all components are supported on a set of diameter $D<\infty$, then for
+$p\ge1$,
+\[
+ W_p^p(Q,\tilde Q)\le
+ D^p\tfrac12\sum_c|\pi_c-\tilde\pi_c|
+ +\sum_c(\pi_c\wedge\tilde\pi_c)W_p^p(Q_c,\tilde Q_c).
+\]
+\end{proposition}
+\begin{proof}
+Set $\alpha_c=\pi_c\wedge\tilde\pi_c$. Couple the shared mass $\alpha_c$
+within component $c$ using a total-variation-optimal coupling. Couple the
+remaining mass arbitrarily. Its total weight is
+$1-\sum_c\alpha_c=\frac12\sum_c|\pi_c-\tilde\pi_c|$, giving the first
+bound. For Wasserstein distance, use optimal or arbitrarily close-to-optimal
+component couplings and transport the unmatched mass at cost at most $D^p$
+per unit mass. Taking the infimum gives the second bound. The diameter
+assumption is not asserted for unbounded Gaussian tubes.
+\end{proof}
+
+\begin{proposition}[Relative quadrature error controls log likelihood]
+\label{prop:relative-quadrature}
+Suppose $p_\theta(x_i)$ and $\tilde p_\theta(x_i)$ are finite and positive
+and, uniformly over $\theta\in\Theta_0$ and all observations,
+\[
+ \left|\tilde p_\theta(x_i)/p_\theta(x_i)-1\right|\le\epsilon<1.
+\]
+Then
+\[
+ \sup_{\theta\in\Theta_0}|\tilde\ell_n(\theta)-\ell_n(\theta)|
+       \le-n\log(1-\epsilon)\le2n\epsilon
+       \quad\text{if }\epsilon\le1/2.
+\]
+\end{proposition}
+\begin{proof}
+Each density ratio lies between $1-\epsilon$ and $1+\epsilon$. Take
+logarithms, sum, and use $\log(1+\epsilon)\le-\log(1-\epsilon)$.
+The last bound follows from $-\log(1-\epsilon)\le2\epsilon$ on $[0,1/2]$.
+This is a criterion bound; it does not establish the score rates in
+Proposition~\ref{prop:numerical-transfer}.
+\end{proof}
+
+\begin{proposition}[Softmax responsibility perturbation]
+\label{prop:softmax-perturbation}
+For finite log-score vectors $a,\tilde a$, let
+$r_z=e^{a_z}/\sum_u e^{a_u}$ and
+$\tilde r_z=e^{\tilde a_z}/\sum_u e^{\tilde a_u}$.
+If $\max_z|a_z-\tilde a_z|\le\delta$, then
+\[
+ e^{-2\delta}\le\tilde r_z/r_z\le e^{2\delta},\qquad
+ \sum_z|\tilde r_z-r_z|\le e^{2\delta}-1.
+\]
+\end{proposition}
+\begin{proof}
+Exponentiation bounds each numerator ratio by $e^{\pm\delta}$; summation
+gives the same bounds for the normalizing-constant ratio. Division gives
+$e^{\pm2\delta}$. Thus
+$|\tilde r_z-r_z|\le(e^{2\delta}-1)r_z$; summing proves the result.
+\end{proof}

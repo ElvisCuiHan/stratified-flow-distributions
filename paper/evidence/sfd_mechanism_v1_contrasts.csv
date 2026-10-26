@@ -1,0 +1,676 @@
+scenario,method,rep,metric,true_contrast,estimated_contrast,error
+mass,SFD joint,0,upper_mass,0.19999999999999996,0.18890944528978204,-0.011090554710217915
+mass,SFD joint,0,upper_position,0.0,0.017162766215760072,0.017162766215760072
+mass,SFD joint,0,upper_width,0.0,-0.0033375059320916306,-0.0033375059320916306
+mass,SFD fixed kernels,0,upper_mass,0.19999999999999996,0.19183182450197045,-0.008168175498029506
+mass,SFD fixed kernels,0,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,0,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,0,upper_mass,0.19999999999999996,0.19183182450197045,-0.008168175498029506
+mass,SFD oracle kernels,0,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,0,upper_width,0.0,0.0,0.0
+position,SFD joint,0,upper_mass,0.0,-0.005016248076172236,-0.005016248076172236
+position,SFD joint,0,upper_position,0.18865369400085374,0.2004957056101364,0.011842011609282665
+position,SFD joint,0,upper_width,0.0,-0.007411815965991164,-0.007411815965991164
+position,SFD fixed kernels,0,upper_mass,0.0,-0.025165545935237288,-0.025165545935237288
+position,SFD fixed kernels,0,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,0,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,0,upper_mass,0.0,2.6815867010254735e-07,2.6815867010254735e-07
+position,SFD oracle kernels,0,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,0,upper_width,0.0,0.0,0.0
+width,SFD joint,0,upper_mass,0.0,-0.0067782849393726585,-0.0067782849393726585
+width,SFD joint,0,upper_position,0.0,0.002569017429564946,0.002569017429564946
+width,SFD joint,0,upper_width,0.07,0.052855161371291606,-0.0171448386287084
+width,SFD fixed kernels,0,upper_mass,0.0,-0.07809181616435196,-0.07809181616435196
+width,SFD fixed kernels,0,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,0,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,0,upper_mass,0.0,0.0020958673864196475,0.0020958673864196475
+width,SFD oracle kernels,0,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,0,upper_width,0.07,0.07,0.0
+mass,SFD joint,1,upper_mass,0.19999999999999996,0.1929125969924665,-0.007087403007533466
+mass,SFD joint,1,upper_position,0.0,-0.0023898955035390745,-0.0023898955035390745
+mass,SFD joint,1,upper_width,0.0,-0.006186575440804823,-0.006186575440804823
+mass,SFD fixed kernels,1,upper_mass,0.19999999999999996,0.19883752727496018,-0.001162472725039776
+mass,SFD fixed kernels,1,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,1,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,1,upper_mass,0.19999999999999996,0.19883752727496018,-0.001162472725039776
+mass,SFD oracle kernels,1,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,1,upper_width,0.0,0.0,0.0
+position,SFD joint,1,upper_mass,0.0,-0.006573029203267133,-0.006573029203267133
+position,SFD joint,1,upper_position,0.18865369400085374,0.1988312067144853,0.010177512713631542
+position,SFD joint,1,upper_width,0.0,-0.009960113648824251,-0.009960113648824251
+position,SFD fixed kernels,1,upper_mass,0.0,-0.027755352365500474,-0.027755352365500474
+position,SFD fixed kernels,1,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,1,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,1,upper_mass,0.0,0.0026613145156033635,0.0026613145156033635
+position,SFD oracle kernels,1,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,1,upper_width,0.0,0.0,0.0
+width,SFD joint,1,upper_mass,0.0,0.01944937152771048,0.01944937152771048
+width,SFD joint,1,upper_position,0.0,-0.019619663499115647,-0.019619663499115647
+width,SFD joint,1,upper_width,0.07,0.071574978404796,0.001574978404795993
+width,SFD fixed kernels,1,upper_mass,0.0,-0.08634052399167247,-0.08634052399167247
+width,SFD fixed kernels,1,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,1,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,1,upper_mass,0.0,0.019129311262411297,0.019129311262411297
+width,SFD oracle kernels,1,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,1,upper_width,0.07,0.07,0.0
+mass,SFD joint,2,upper_mass,0.19999999999999996,0.22666017460464355,0.026660174604643594
+mass,SFD joint,2,upper_position,0.0,-0.004064251239972727,-0.004064251239972727
+mass,SFD joint,2,upper_width,0.0,-0.007154845691915074,-0.007154845691915074
+mass,SFD fixed kernels,2,upper_mass,0.19999999999999996,0.2328404260097341,0.032840426009734136
+mass,SFD fixed kernels,2,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,2,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,2,upper_mass,0.19999999999999996,0.2328404260097341,0.032840426009734136
+mass,SFD oracle kernels,2,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,2,upper_width,0.0,0.0,0.0
+position,SFD joint,2,upper_mass,0.0,0.014790391792917912,0.014790391792917912
+position,SFD joint,2,upper_position,0.18865369400085374,0.19609697902723305,0.007443285026379309
+position,SFD joint,2,upper_width,0.0,-0.0051471525961027526,-0.0051471525961027526
+position,SFD fixed kernels,2,upper_mass,0.0,-0.0015993423320329603,-0.0015993423320329603
+position,SFD fixed kernels,2,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,2,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,2,upper_mass,0.0,0.020553937053867155,0.020553937053867155
+position,SFD oracle kernels,2,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,2,upper_width,0.0,0.0,0.0
+width,SFD joint,2,upper_mass,0.0,0.027722626437974685,0.027722626437974685
+width,SFD joint,2,upper_position,0.0,0.010959540267047208,0.010959540267047208
+width,SFD joint,2,upper_width,0.07,0.05589100349722852,-0.01410899650277149
+width,SFD fixed kernels,2,upper_mass,0.0,-0.05093159870809777,-0.05093159870809777
+width,SFD fixed kernels,2,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,2,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,2,upper_mass,0.0,0.03617012692941285,0.03617012692941285
+width,SFD oracle kernels,2,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,2,upper_width,0.07,0.07,0.0
+mass,SFD joint,3,upper_mass,0.19999999999999996,0.17731948638126577,-0.022680513618734188
+mass,SFD joint,3,upper_position,0.0,-0.0089180817887059,-0.0089180817887059
+mass,SFD joint,3,upper_width,0.0,-0.0017638468623502185,-0.0017638468623502185
+mass,SFD fixed kernels,3,upper_mass,0.19999999999999996,0.1784737444223466,-0.021526255577653364
+mass,SFD fixed kernels,3,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,3,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,3,upper_mass,0.19999999999999996,0.1784737444223466,-0.021526255577653364
+mass,SFD oracle kernels,3,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,3,upper_width,0.0,0.0,0.0
+position,SFD joint,3,upper_mass,0.0,0.0027169948986191517,0.0027169948986191517
+position,SFD joint,3,upper_position,0.18865369400085374,0.18644149223247497,-0.0022122017683787742
+position,SFD joint,3,upper_width,0.0,-0.0030837107376750356,-0.0030837107376750356
+position,SFD fixed kernels,3,upper_mass,0.0,-0.013945624375588439,-0.013945624375588439
+position,SFD fixed kernels,3,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,3,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,3,upper_mass,0.0,0.005220136827477295,0.005220136827477295
+position,SFD oracle kernels,3,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,3,upper_width,0.0,0.0,0.0
+width,SFD joint,3,upper_mass,0.0,0.004051851814552643,0.004051851814552643
+width,SFD joint,3,upper_position,0.0,0.00622627683579946,0.00622627683579946
+width,SFD joint,3,upper_width,0.07,0.06494363477367486,-0.005056365226325146
+width,SFD fixed kernels,3,upper_mass,0.0,-0.0878264775314514,-0.0878264775314514
+width,SFD fixed kernels,3,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,3,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,3,upper_mass,0.0,0.00748372940626324,0.00748372940626324
+width,SFD oracle kernels,3,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,3,upper_width,0.07,0.07,0.0
+mass,SFD joint,4,upper_mass,0.19999999999999996,0.19830273940557308,-0.0016972605944268748
+mass,SFD joint,4,upper_position,0.0,0.019597620672412386,0.019597620672412386
+mass,SFD joint,4,upper_width,0.0,0.0030793855402137388,0.0030793855402137388
+mass,SFD fixed kernels,4,upper_mass,0.19999999999999996,0.19786501746258678,-0.002134982537413177
+mass,SFD fixed kernels,4,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,4,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,4,upper_mass,0.19999999999999996,0.19786501746258678,-0.002134982537413177
+mass,SFD oracle kernels,4,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,4,upper_width,0.0,0.0,0.0
+position,SFD joint,4,upper_mass,0.0,0.000935469547958867,0.000935469547958867
+position,SFD joint,4,upper_position,0.18865369400085374,0.2141792479488671,0.02552555394801337
+position,SFD joint,4,upper_width,0.0,0.0052255458419841055,0.0052255458419841055
+position,SFD fixed kernels,4,upper_mass,0.0,-0.019391845309655265,-0.019391845309655265
+position,SFD fixed kernels,4,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,4,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,4,upper_mass,0.0,-0.00043165209804746363,-0.00043165209804746363
+position,SFD oracle kernels,4,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,4,upper_width,0.0,0.0,0.0
+width,SFD joint,4,upper_mass,0.0,-0.0329368840287283,-0.0329368840287283
+width,SFD joint,4,upper_position,0.0,0.02910753083703954,0.02910753083703954
+width,SFD joint,4,upper_width,0.07,0.07044385291780719,0.00044385291780718594
+width,SFD fixed kernels,4,upper_mass,0.0,-0.11502017610524501,-0.11502017610524501
+width,SFD fixed kernels,4,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,4,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,4,upper_mass,0.0,-0.031364454651776286,-0.031364454651776286
+width,SFD oracle kernels,4,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,4,upper_width,0.07,0.07,0.0
+mass,SFD joint,5,upper_mass,0.19999999999999996,0.17419762344262402,-0.02580237655737594
+mass,SFD joint,5,upper_position,0.0,-0.001953259509461569,-0.001953259509461569
+mass,SFD joint,5,upper_width,0.0,-0.003096265664612727,-0.003096265664612727
+mass,SFD fixed kernels,5,upper_mass,0.19999999999999996,0.17744766687796032,-0.022552333122039636
+mass,SFD fixed kernels,5,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,5,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,5,upper_mass,0.19999999999999996,0.17744766687796032,-0.022552333122039636
+mass,SFD oracle kernels,5,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,5,upper_width,0.0,0.0,0.0
+position,SFD joint,5,upper_mass,0.0,-0.012469051589313607,-0.012469051589313607
+position,SFD joint,5,upper_position,0.18865369400085374,0.17815155367573365,-0.01050214032512009
+position,SFD joint,5,upper_width,0.0,-0.007759938250759324,-0.007759938250759324
+position,SFD fixed kernels,5,upper_mass,0.0,-0.023438514790994958,-0.023438514790994958
+position,SFD fixed kernels,5,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,5,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,5,upper_mass,0.0,-0.007786913990771971,-0.007786913990771971
+position,SFD oracle kernels,5,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,5,upper_width,0.0,0.0,0.0
+width,SFD joint,5,upper_mass,0.0,-0.0086471756428107,-0.0086471756428107
+width,SFD joint,5,upper_position,0.0,-0.012474161302841236,-0.012474161302841236
+width,SFD joint,5,upper_width,0.07,0.06524393974268818,-0.004756060257311831
+width,SFD fixed kernels,5,upper_mass,0.0,-0.10569720777721714,-0.10569720777721714
+width,SFD fixed kernels,5,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,5,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,5,upper_mass,0.0,-0.007176967906847298,-0.007176967906847298
+width,SFD oracle kernels,5,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,5,upper_width,0.07,0.07,0.0
+mass,SFD joint,6,upper_mass,0.19999999999999996,0.19564642374231211,-0.004353576257687841
+mass,SFD joint,6,upper_position,0.0,-0.003407921243319567,-0.003407921243319567
+mass,SFD joint,6,upper_width,0.0,0.0006423125594976903,0.0006423125594976903
+mass,SFD fixed kernels,6,upper_mass,0.19999999999999996,0.19431463690503775,-0.005685363094962204
+mass,SFD fixed kernels,6,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,6,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,6,upper_mass,0.19999999999999996,0.19431463690503775,-0.005685363094962204
+mass,SFD oracle kernels,6,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,6,upper_width,0.0,0.0,0.0
+position,SFD joint,6,upper_mass,0.0,-0.045284601045340545,-0.045284601045340545
+position,SFD joint,6,upper_position,0.18865369400085374,0.17542216282966383,-0.013231531171189914
+position,SFD joint,6,upper_width,0.0,0.0018630491118868664,0.0018630491118868664
+position,SFD fixed kernels,6,upper_mass,0.0,-0.07093781864115867,-0.07093781864115867
+position,SFD fixed kernels,6,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,6,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,6,upper_mass,0.0,-0.04670521362319213,-0.04670521362319213
+position,SFD oracle kernels,6,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,6,upper_width,0.0,0.0,0.0
+width,SFD joint,6,upper_mass,0.0,-0.011592841051201674,-0.011592841051201674
+width,SFD joint,6,upper_position,0.0,-0.011811794882578941,-0.011811794882578941
+width,SFD joint,6,upper_width,0.07,0.07113621986458488,0.0011362198645848698
+width,SFD fixed kernels,6,upper_mass,0.0,-0.11031538837086452,-0.11031538837086452
+width,SFD fixed kernels,6,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,6,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,6,upper_mass,0.0,-0.013504065839434531,-0.013504065839434531
+width,SFD oracle kernels,6,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,6,upper_width,0.07,0.07,0.0
+mass,SFD joint,7,upper_mass,0.19999999999999996,0.24809661506566755,0.04809661506566759
+mass,SFD joint,7,upper_position,0.0,-0.01475205939709473,-0.01475205939709473
+mass,SFD joint,7,upper_width,0.0,0.007952750998212625,0.007952750998212625
+mass,SFD fixed kernels,7,upper_mass,0.19999999999999996,0.24418539280612117,0.044185392806121215
+mass,SFD fixed kernels,7,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,7,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,7,upper_mass,0.19999999999999996,0.24418539280612117,0.044185392806121215
+mass,SFD oracle kernels,7,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,7,upper_width,0.0,0.0,0.0
+position,SFD joint,7,upper_mass,0.0,-0.008143141522623298,-0.008143141522623298
+position,SFD joint,7,upper_position,0.18865369400085374,0.18257317514367166,-0.006080518857182082
+position,SFD joint,7,upper_width,0.0,0.004669491423345391,0.004669491423345391
+position,SFD fixed kernels,7,upper_mass,0.0,-0.03417675519104307,-0.03417675519104307
+position,SFD fixed kernels,7,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,7,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,7,upper_mass,0.0,-0.010248980220023574,-0.010248980220023574
+position,SFD oracle kernels,7,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,7,upper_width,0.0,0.0,0.0
+width,SFD joint,7,upper_mass,0.0,0.019335997806430416,0.019335997806430416
+width,SFD joint,7,upper_position,0.0,-0.02069099752755177,-0.02069099752755177
+width,SFD joint,7,upper_width,0.07,0.07604746274933571,0.006047462749335708
+width,SFD fixed kernels,7,upper_mass,0.0,-0.0776712779934538,-0.0776712779934538
+width,SFD fixed kernels,7,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,7,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,7,upper_mass,0.0,0.013899739344053585,0.013899739344053585
+width,SFD oracle kernels,7,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,7,upper_width,0.07,0.07,0.0
+mass,SFD joint,8,upper_mass,0.19999999999999996,0.13596188296436318,-0.06403811703563678
+mass,SFD joint,8,upper_position,0.0,-0.005491406081905736,-0.005491406081905736
+mass,SFD joint,8,upper_width,0.0,-0.00048440217047765466,-0.00048440217047765466
+mass,SFD fixed kernels,8,upper_mass,0.19999999999999996,0.13605475423568292,-0.06394524576431704
+mass,SFD fixed kernels,8,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,8,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,8,upper_mass,0.19999999999999996,0.13605475423568292,-0.06394524576431704
+mass,SFD oracle kernels,8,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,8,upper_width,0.0,0.0,0.0
+position,SFD joint,8,upper_mass,0.0,-0.03534578044279901,-0.03534578044279901
+position,SFD joint,8,upper_position,0.18865369400085374,0.17948621671038512,-0.009167477290468629
+position,SFD joint,8,upper_width,0.0,-0.004669801398998599,-0.004669801398998599
+position,SFD fixed kernels,8,upper_mass,0.0,-0.05453371731551582,-0.05453371731551582
+position,SFD fixed kernels,8,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,8,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,8,upper_mass,0.0,-0.03334801246116448,-0.03334801246116448
+position,SFD oracle kernels,8,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,8,upper_width,0.0,0.0,0.0
+width,SFD joint,8,upper_mass,0.0,-0.029412683768171133,-0.029412683768171133
+width,SFD joint,8,upper_position,0.0,-0.004469321764956846,-0.004469321764956846
+width,SFD joint,8,upper_width,0.07,0.06056613373195448,-0.00943386626804553
+width,SFD fixed kernels,8,upper_mass,0.0,-0.11036784464619626,-0.11036784464619626
+width,SFD fixed kernels,8,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,8,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,8,upper_mass,0.0,-0.024726269737572915,-0.024726269737572915
+width,SFD oracle kernels,8,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,8,upper_width,0.07,0.07,0.0
+mass,SFD joint,9,upper_mass,0.19999999999999996,0.22109340606950018,0.02109340606950022
+mass,SFD joint,9,upper_position,0.0,0.013210506017629742,0.013210506017629742
+mass,SFD joint,9,upper_width,0.0,0.004788333458556587,0.004788333458556587
+mass,SFD fixed kernels,9,upper_mass,0.19999999999999996,0.21652630364267766,0.01652630364267771
+mass,SFD fixed kernels,9,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,9,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,9,upper_mass,0.19999999999999996,0.21652630364267766,0.01652630364267771
+mass,SFD oracle kernels,9,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,9,upper_width,0.0,0.0,0.0
+position,SFD joint,9,upper_mass,0.0,0.005731571094320709,0.005731571094320709
+position,SFD joint,9,upper_position,0.18865369400085374,0.19410590600126765,0.005452212000413903
+position,SFD joint,9,upper_width,0.0,0.00039949209842095323,0.00039949209842095323
+position,SFD fixed kernels,9,upper_mass,0.0,-0.013417861749378979,-0.013417861749378979
+position,SFD fixed kernels,9,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,9,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,9,upper_mass,0.0,0.005678388606335405,0.005678388606335405
+position,SFD oracle kernels,9,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,9,upper_width,0.0,0.0,0.0
+width,SFD joint,9,upper_mass,0.0,-0.015207014054575252,-0.015207014054575252
+width,SFD joint,9,upper_position,0.0,0.026698198369797366,0.026698198369797366
+width,SFD joint,9,upper_width,0.07,0.06849912561745577,-0.0015008743825442317
+width,SFD fixed kernels,9,upper_mass,0.0,-0.10737755960752882,-0.10737755960752882
+width,SFD fixed kernels,9,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,9,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,9,upper_mass,0.0,-0.011055948096476087,-0.011055948096476087
+width,SFD oracle kernels,9,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,9,upper_width,0.07,0.07,0.0
+mass,SFD joint,10,upper_mass,0.19999999999999996,0.16807145170577203,-0.03192854829422792
+mass,SFD joint,10,upper_position,0.0,-0.013440039563966055,-0.013440039563966055
+mass,SFD joint,10,upper_width,0.0,-0.0008141562275886111,-0.0008141562275886111
+mass,SFD fixed kernels,10,upper_mass,0.19999999999999996,0.1687930836244272,-0.03120691637557277
+mass,SFD fixed kernels,10,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,10,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,10,upper_mass,0.19999999999999996,0.1687930836244272,-0.03120691637557277
+mass,SFD oracle kernels,10,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,10,upper_width,0.0,0.0,0.0
+position,SFD joint,10,upper_mass,0.0,-0.05322340073876697,-0.05322340073876697
+position,SFD joint,10,upper_position,0.18865369400085374,0.1946378775368659,0.005984183536012155
+position,SFD joint,10,upper_width,0.0,-0.0016334708434224132,-0.0016334708434224132
+position,SFD fixed kernels,10,upper_mass,0.0,-0.07724394163094922,-0.07724394163094922
+position,SFD fixed kernels,10,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,10,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,10,upper_mass,0.0,-0.05099089237893789,-0.05099089237893789
+position,SFD oracle kernels,10,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,10,upper_width,0.0,0.0,0.0
+width,SFD joint,10,upper_mass,0.0,-0.044017594253056624,-0.044017594253056624
+width,SFD joint,10,upper_position,0.0,-0.012386904583785774,-0.012386904583785774
+width,SFD joint,10,upper_width,0.07,0.07287753535835079,0.00287753535835078
+width,SFD fixed kernels,10,upper_mass,0.0,-0.14547834340222782,-0.14547834340222782
+width,SFD fixed kernels,10,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,10,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,10,upper_mass,0.0,-0.046112255929153356,-0.046112255929153356
+width,SFD oracle kernels,10,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,10,upper_width,0.07,0.07,0.0
+mass,SFD joint,11,upper_mass,0.19999999999999996,0.15277161873097506,-0.0472283812690249
+mass,SFD joint,11,upper_position,0.0,0.008957998253105282,0.008957998253105282
+mass,SFD joint,11,upper_width,0.0,0.00023284815194921094,0.00023284815194921094
+mass,SFD fixed kernels,11,upper_mass,0.19999999999999996,0.1529521047367724,-0.04704789526322756
+mass,SFD fixed kernels,11,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,11,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,11,upper_mass,0.19999999999999996,0.1529521047367724,-0.04704789526322756
+mass,SFD oracle kernels,11,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,11,upper_width,0.0,0.0,0.0
+position,SFD joint,11,upper_mass,0.0,-0.003163728820279932,-0.003163728820279932
+position,SFD joint,11,upper_position,0.18865369400085374,0.1898861921614512,0.0012324981605974505
+position,SFD joint,11,upper_width,0.0,-0.0024208888309718013,-0.0024208888309718013
+position,SFD fixed kernels,11,upper_mass,0.0,-0.02151861488728163,-0.02151861488728163
+position,SFD fixed kernels,11,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,11,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,11,upper_mass,0.0,-0.0024454059598843503,-0.0024454059598843503
+position,SFD oracle kernels,11,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,11,upper_width,0.0,0.0,0.0
+width,SFD joint,11,upper_mass,0.0,-0.0044241799907019375,-0.0044241799907019375
+width,SFD joint,11,upper_position,0.0,0.022428139779009704,0.022428139779009704
+width,SFD joint,11,upper_width,0.07,0.07858937996856519,0.00858937996856518
+width,SFD fixed kernels,11,upper_mass,0.0,-0.11391211160358511,-0.11391211160358511
+width,SFD fixed kernels,11,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,11,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,11,upper_mass,0.0,-0.0076391518823326066,-0.0076391518823326066
+width,SFD oracle kernels,11,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,11,upper_width,0.07,0.07,0.0
+mass,SFD joint,12,upper_mass,0.19999999999999996,0.22442839526571923,0.02442839526571927
+mass,SFD joint,12,upper_position,0.0,0.0040324641111403325,0.0040324641111403325
+mass,SFD joint,12,upper_width,0.0,0.0002114997766628074,0.0002114997766628074
+mass,SFD fixed kernels,12,upper_mass,0.19999999999999996,0.22427942520785576,0.02427942520785581
+mass,SFD fixed kernels,12,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,12,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,12,upper_mass,0.19999999999999996,0.22427942520785576,0.02427942520785581
+mass,SFD oracle kernels,12,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,12,upper_width,0.0,0.0,0.0
+position,SFD joint,12,upper_mass,0.0,-0.018781634947754422,-0.018781634947754422
+position,SFD joint,12,upper_position,0.18865369400085374,0.18579327422517422,-0.0028604197756795235
+position,SFD joint,12,upper_width,0.0,0.0035548963675297446,0.0035548963675297446
+position,SFD fixed kernels,12,upper_mass,0.0,-0.04239637586414852,-0.04239637586414852
+position,SFD fixed kernels,12,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,12,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,12,upper_mass,0.0,-0.020944706773232125,-0.020944706773232125
+position,SFD oracle kernels,12,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,12,upper_width,0.0,0.0,0.0
+width,SFD joint,12,upper_mass,0.0,0.022366311009952566,0.022366311009952566
+width,SFD joint,12,upper_position,0.0,-0.017315637832038377,-0.017315637832038377
+width,SFD joint,12,upper_width,0.07,0.08244982130570734,0.012449821305707334
+width,SFD fixed kernels,12,upper_mass,0.0,-0.0923404761268179,-0.0923404761268179
+width,SFD fixed kernels,12,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,12,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,12,upper_mass,0.0,0.014023685272099073,0.014023685272099073
+width,SFD oracle kernels,12,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,12,upper_width,0.07,0.07,0.0
+mass,SFD joint,13,upper_mass,0.19999999999999996,0.21102416003538715,0.011024160035387198
+mass,SFD joint,13,upper_position,0.0,-0.0036126879163563275,-0.0036126879163563275
+mass,SFD joint,13,upper_width,0.0,-0.0011117727473499983,-0.0011117727473499983
+mass,SFD fixed kernels,13,upper_mass,0.19999999999999996,0.21198596904136796,0.011985969041368005
+mass,SFD fixed kernels,13,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,13,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,13,upper_mass,0.19999999999999996,0.21198596904136796,0.011985969041368005
+mass,SFD oracle kernels,13,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,13,upper_width,0.0,0.0,0.0
+position,SFD joint,13,upper_mass,0.0,-0.000866128134010713,-0.000866128134010713
+position,SFD joint,13,upper_position,0.18865369400085374,0.1924591174422522,0.003805423441398448
+position,SFD joint,13,upper_width,0.0,-0.001082940068926036,-0.001082940068926036
+position,SFD fixed kernels,13,upper_mass,0.0,-0.029657536880848656,-0.029657536880848656
+position,SFD fixed kernels,13,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,13,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,13,upper_mass,0.0,-4.881042424104143e-05,-4.881042424104143e-05
+position,SFD oracle kernels,13,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,13,upper_width,0.0,0.0,0.0
+width,SFD joint,13,upper_mass,0.0,0.009413386743785224,0.009413386743785224
+width,SFD joint,13,upper_position,0.0,-0.013407286220407988,-0.013407286220407988
+width,SFD joint,13,upper_width,0.07,0.07341326896857686,0.0034132689685768547
+width,SFD fixed kernels,13,upper_mass,0.0,-0.09944649689151847,-0.09944649689151847
+width,SFD fixed kernels,13,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,13,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,13,upper_mass,0.0,0.007779326413930365,0.007779326413930365
+width,SFD oracle kernels,13,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,13,upper_width,0.07,0.07,0.0
+mass,SFD joint,14,upper_mass,0.19999999999999996,0.19517507589722394,-0.004824924102776018
+mass,SFD joint,14,upper_position,0.0,-0.0001810918061504463,-0.0001810918061504463
+mass,SFD joint,14,upper_width,0.0,-0.0025731697307897483,-0.0025731697307897483
+mass,SFD fixed kernels,14,upper_mass,0.19999999999999996,0.19722153056303476,-0.002778469436965192
+mass,SFD fixed kernels,14,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,14,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,14,upper_mass,0.19999999999999996,0.19722153056303476,-0.002778469436965192
+mass,SFD oracle kernels,14,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,14,upper_width,0.0,0.0,0.0
+position,SFD joint,14,upper_mass,0.0,0.0017301545025268927,0.0017301545025268927
+position,SFD joint,14,upper_position,0.18865369400085374,0.18068164912284723,-0.007972044878006512
+position,SFD joint,14,upper_width,0.0,-0.003621964601391539,-0.003621964601391539
+position,SFD fixed kernels,14,upper_mass,0.0,-0.014264385682980774,-0.014264385682980774
+position,SFD fixed kernels,14,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,14,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,14,upper_mass,0.0,0.004176204146391971,0.004176204146391971
+position,SFD oracle kernels,14,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,14,upper_width,0.0,0.0,0.0
+width,SFD joint,14,upper_mass,0.0,-0.0029887606719742887,-0.0029887606719742887
+width,SFD joint,14,upper_position,0.0,0.0034828177118548798,0.0034828177118548798
+width,SFD joint,14,upper_width,0.07,0.06050936748131476,-0.009490632518685246
+width,SFD fixed kernels,14,upper_mass,0.0,-0.08168689873918294,-0.08168689873918294
+width,SFD fixed kernels,14,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,14,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,14,upper_mass,0.0,0.004408667520586662,0.004408667520586662
+width,SFD oracle kernels,14,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,14,upper_width,0.07,0.07,0.0
+mass,SFD joint,15,upper_mass,0.19999999999999996,0.20809545524706274,0.008095455247062788
+mass,SFD joint,15,upper_position,0.0,0.006499065029532625,0.006499065029532625
+mass,SFD joint,15,upper_width,0.0,0.002306562418094557,0.002306562418094557
+mass,SFD fixed kernels,15,upper_mass,0.19999999999999996,0.20680628453615124,0.006806284536151286
+mass,SFD fixed kernels,15,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,15,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,15,upper_mass,0.19999999999999996,0.20680628453615124,0.006806284536151286
+mass,SFD oracle kernels,15,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,15,upper_width,0.0,0.0,0.0
+position,SFD joint,15,upper_mass,0.0,-0.0364297070517311,-0.0364297070517311
+position,SFD joint,15,upper_position,0.18865369400085374,0.19414109013626202,0.005487396135408273
+position,SFD joint,15,upper_width,0.0,-0.00038339425737204946,-0.00038339425737204946
+position,SFD fixed kernels,15,upper_mass,0.0,-0.058754401689299296,-0.058754401689299296
+position,SFD fixed kernels,15,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,15,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,15,upper_mass,0.0,-0.035822513788596466,-0.035822513788596466
+position,SFD oracle kernels,15,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,15,upper_width,0.0,0.0,0.0
+width,SFD joint,15,upper_mass,0.0,-0.007208266363672167,-0.007208266363672167
+width,SFD joint,15,upper_position,0.0,0.01769409922960219,0.01769409922960219
+width,SFD joint,15,upper_width,0.07,0.06301348886319987,-0.0069865111368001415
+width,SFD fixed kernels,15,upper_mass,0.0,-0.09496956150897362,-0.09496956150897362
+width,SFD fixed kernels,15,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,15,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,15,upper_mass,0.0,-0.003150266663726309,-0.003150266663726309
+width,SFD oracle kernels,15,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,15,upper_width,0.07,0.07,0.0
+mass,SFD joint,16,upper_mass,0.19999999999999996,0.18350549716872522,-0.016494502831274738
+mass,SFD joint,16,upper_position,0.0,0.00021385248426619707,0.00021385248426619707
+mass,SFD joint,16,upper_width,0.0,-0.0038201054685495506,-0.0038201054685495506
+mass,SFD fixed kernels,16,upper_mass,0.19999999999999996,0.1851391157652132,-0.014860884234786764
+mass,SFD fixed kernels,16,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,16,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,16,upper_mass,0.19999999999999996,0.1851391157652132,-0.014860884234786764
+mass,SFD oracle kernels,16,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,16,upper_width,0.0,0.0,0.0
+position,SFD joint,16,upper_mass,0.0,0.01566546696103227,0.01566546696103227
+position,SFD joint,16,upper_position,0.18865369400085374,0.20470070466027013,0.016047010659416383
+position,SFD joint,16,upper_width,0.0,0.004786531368945787,0.004786531368945787
+position,SFD fixed kernels,16,upper_mass,0.0,-0.025835422250597706,-0.025835422250597706
+position,SFD fixed kernels,16,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,16,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,16,upper_mass,0.0,0.012300788631491533,0.012300788631491533
+position,SFD oracle kernels,16,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,16,upper_width,0.0,0.0,0.0
+width,SFD joint,16,upper_mass,0.0,0.01630137453329178,0.01630137453329178
+width,SFD joint,16,upper_position,0.0,-0.007163226126962796,-0.007163226126962796
+width,SFD joint,16,upper_width,0.07,0.06225426692073514,-0.007745733079264863
+width,SFD fixed kernels,16,upper_mass,0.0,-0.06780227186971,-0.06780227186971
+width,SFD fixed kernels,16,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,16,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,16,upper_mass,0.0,0.01707455785507822,0.01707455785507822
+width,SFD oracle kernels,16,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,16,upper_width,0.07,0.07,0.0
+mass,SFD joint,17,upper_mass,0.19999999999999996,0.23374834439179293,0.03374834439179297
+mass,SFD joint,17,upper_position,0.0,0.004518894019422792,0.004518894019422792
+mass,SFD joint,17,upper_width,0.0,-0.0045425414976316,-0.0045425414976316
+mass,SFD fixed kernels,17,upper_mass,0.19999999999999996,0.23733122171755355,0.0373312217175536
+mass,SFD fixed kernels,17,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,17,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,17,upper_mass,0.19999999999999996,0.23733122171755355,0.0373312217175536
+mass,SFD oracle kernels,17,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,17,upper_width,0.0,0.0,0.0
+position,SFD joint,17,upper_mass,0.0,-0.008642825827470724,-0.008642825827470724
+position,SFD joint,17,upper_position,0.18865369400085374,0.1802926606115503,-0.00836103338930344
+position,SFD joint,17,upper_width,0.0,-0.006726319602169531,-0.006726319602169531
+position,SFD fixed kernels,17,upper_mass,0.0,-0.02484624617723502,-0.02484624617723502
+position,SFD fixed kernels,17,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,17,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,17,upper_mass,0.0,-0.004089541032794297,-0.004089541032794297
+position,SFD oracle kernels,17,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,17,upper_width,0.0,0.0,0.0
+width,SFD joint,17,upper_mass,0.0,-0.0015954958383649909,-0.0015954958383649909
+width,SFD joint,17,upper_position,0.0,0.01036856988763496,0.01036856988763496
+width,SFD joint,17,upper_width,0.07,0.06521251819744879,-0.004787481802551216
+width,SFD fixed kernels,17,upper_mass,0.0,-0.09078388578064023,-0.09078388578064023
+width,SFD fixed kernels,17,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,17,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,17,upper_mass,0.0,0.0025120428227319302,0.0025120428227319302
+width,SFD oracle kernels,17,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,17,upper_width,0.07,0.07,0.0
+mass,SFD joint,18,upper_mass,0.19999999999999996,0.20200308459188238,0.0020030845918824203
+mass,SFD joint,18,upper_position,0.0,-0.00039922257453917087,-0.00039922257453917087
+mass,SFD joint,18,upper_width,0.0,0.006689790615518484,0.006689790615518484
+mass,SFD fixed kernels,18,upper_mass,0.19999999999999996,0.19674033573290245,-0.0032596642670975062
+mass,SFD fixed kernels,18,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,18,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,18,upper_mass,0.19999999999999996,0.19674033573290245,-0.0032596642670975062
+mass,SFD oracle kernels,18,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,18,upper_width,0.0,0.0,0.0
+position,SFD joint,18,upper_mass,0.0,0.02648057602504511,0.02648057602504511
+position,SFD joint,18,upper_position,0.18865369400085374,0.1998986449658821,0.011244950965028366
+position,SFD joint,18,upper_width,0.0,0.011672595835755584,0.011672595835755584
+position,SFD fixed kernels,18,upper_mass,0.0,-0.005277660251350957,-0.005277660251350957
+position,SFD fixed kernels,18,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,18,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,18,upper_mass,0.0,0.018817026735930997,0.018817026735930997
+position,SFD oracle kernels,18,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,18,upper_width,0.0,0.0,0.0
+width,SFD joint,18,upper_mass,0.0,0.036122859881700664,0.036122859881700664
+width,SFD joint,18,upper_position,0.0,-0.009192399837423038,-0.009192399837423038
+width,SFD joint,18,upper_width,0.07,0.0726368574682516,0.0026368574682515966
+width,SFD fixed kernels,18,upper_mass,0.0,-0.05748551909772037,-0.05748551909772037
+width,SFD fixed kernels,18,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,18,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,18,upper_mass,0.0,0.03344705743334969,0.03344705743334969
+width,SFD oracle kernels,18,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,18,upper_width,0.07,0.07,0.0
+mass,SFD joint,19,upper_mass,0.19999999999999996,0.21937639830606298,0.019376398306063025
+mass,SFD joint,19,upper_position,0.0,-0.007546616707023834,-0.007546616707023834
+mass,SFD joint,19,upper_width,0.0,0.005130916167844793,0.005130916167844793
+mass,SFD fixed kernels,19,upper_mass,0.19999999999999996,0.2147654762160069,0.014765476216006934
+mass,SFD fixed kernels,19,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,19,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,19,upper_mass,0.19999999999999996,0.2147654762160069,0.014765476216006934
+mass,SFD oracle kernels,19,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,19,upper_width,0.0,0.0,0.0
+position,SFD joint,19,upper_mass,0.0,0.0050458099668543865,0.0050458099668543865
+position,SFD joint,19,upper_position,0.18865369400085374,0.18343624501891387,-0.005217448981939876
+position,SFD joint,19,upper_width,0.0,0.005289220720543039,0.005289220720543039
+position,SFD fixed kernels,19,upper_mass,0.0,-0.022746653180127974,-0.022746653180127974
+position,SFD fixed kernels,19,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,19,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,19,upper_mass,0.0,0.001825621400141586,0.001825621400141586
+position,SFD oracle kernels,19,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,19,upper_width,0.0,0.0,0.0
+width,SFD joint,19,upper_mass,0.0,-0.005918739298184705,-0.005918739298184705
+width,SFD joint,19,upper_position,0.0,-0.012053293497324535,-0.012053293497324535
+width,SFD joint,19,upper_width,0.07,0.08131747439778618,0.011317474397786173
+width,SFD fixed kernels,19,upper_mass,0.0,-0.11070931117783828,-0.11070931117783828
+width,SFD fixed kernels,19,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,19,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,19,upper_mass,0.0,-0.015546630494711666,-0.015546630494711666
+width,SFD oracle kernels,19,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,19,upper_width,0.07,0.07,0.0
+mass,SFD joint,20,upper_mass,0.19999999999999996,0.19321291686081749,-0.00678708313918247
+mass,SFD joint,20,upper_position,0.0,0.008333993910727033,0.008333993910727033
+mass,SFD joint,20,upper_width,0.0,-0.0030233224122251656,-0.0030233224122251656
+mass,SFD fixed kernels,20,upper_mass,0.19999999999999996,0.19530244245750872,-0.0046975575424912375
+mass,SFD fixed kernels,20,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,20,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,20,upper_mass,0.19999999999999996,0.19530244245750872,-0.0046975575424912375
+mass,SFD oracle kernels,20,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,20,upper_width,0.0,0.0,0.0
+position,SFD joint,20,upper_mass,0.0,0.004098871170887031,0.004098871170887031
+position,SFD joint,20,upper_position,0.18865369400085374,0.21586180455195342,0.027208110551099673
+position,SFD joint,20,upper_width,0.0,-0.003957726655547653,-0.003957726655547653
+position,SFD fixed kernels,20,upper_mass,0.0,-0.027131382813947724,-0.027131382813947724
+position,SFD fixed kernels,20,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,20,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,20,upper_mass,0.0,0.008291904790850901,0.008291904790850901
+position,SFD oracle kernels,20,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,20,upper_width,0.0,0.0,0.0
+width,SFD joint,20,upper_mass,0.0,-0.020362294061328612,-0.020362294061328612
+width,SFD joint,20,upper_position,0.0,0.004946496235119668,0.004946496235119668
+width,SFD joint,20,upper_width,0.07,0.05889870264717702,-0.011101297352822989
+width,SFD fixed kernels,20,upper_mass,0.0,-0.09662808664692313,-0.09662808664692313
+width,SFD fixed kernels,20,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,20,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,20,upper_mass,0.0,-0.015575248403168152,-0.015575248403168152
+width,SFD oracle kernels,20,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,20,upper_width,0.07,0.07,0.0
+mass,SFD joint,21,upper_mass,0.19999999999999996,0.16566030074401222,-0.03433969925598773
+mass,SFD joint,21,upper_position,0.0,0.00664682772795705,0.00664682772795705
+mass,SFD joint,21,upper_width,0.0,-0.00038509260493628517,-0.00038509260493628517
+mass,SFD fixed kernels,21,upper_mass,0.19999999999999996,0.16615930289933634,-0.03384069710066362
+mass,SFD fixed kernels,21,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,21,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,21,upper_mass,0.19999999999999996,0.16615930289933634,-0.03384069710066362
+mass,SFD oracle kernels,21,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,21,upper_width,0.0,0.0,0.0
+position,SFD joint,21,upper_mass,0.0,-0.04113971598131316,-0.04113971598131316
+position,SFD joint,21,upper_position,0.18865369400085374,0.20856207098966434,0.019908376988810594
+position,SFD joint,21,upper_width,0.0,-0.00026017133005636073,-0.00026017133005636073
+position,SFD fixed kernels,21,upper_mass,0.0,-0.06458260145965011,-0.06458260145965011
+position,SFD fixed kernels,21,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,21,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,21,upper_mass,0.0,-0.03851186249841437,-0.03851186249841437
+position,SFD oracle kernels,21,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,21,upper_width,0.0,0.0,0.0
+width,SFD joint,21,upper_mass,0.0,-0.0485552188489361,-0.0485552188489361
+width,SFD joint,21,upper_position,0.0,-0.0027373940112833672,-0.0027373940112833672
+width,SFD joint,21,upper_width,0.07,0.062071011765908915,-0.007928988234091092
+width,SFD fixed kernels,21,upper_mass,0.0,-0.12900872905784527,-0.12900872905784527
+width,SFD fixed kernels,21,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,21,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,21,upper_mass,0.0,-0.04328589226881607,-0.04328589226881607
+width,SFD oracle kernels,21,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,21,upper_width,0.07,0.07,0.0
+mass,SFD joint,22,upper_mass,0.19999999999999996,0.20060092572410376,0.0006009257241038068
+mass,SFD joint,22,upper_position,0.0,-0.006086026254026711,-0.006086026254026711
+mass,SFD joint,22,upper_width,0.0,-0.0013445361089689106,-0.0013445361089689106
+mass,SFD fixed kernels,22,upper_mass,0.19999999999999996,0.20072827772847351,0.0007282777284735586
+mass,SFD fixed kernels,22,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,22,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,22,upper_mass,0.19999999999999996,0.20072827772847351,0.0007282777284735586
+mass,SFD oracle kernels,22,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,22,upper_width,0.0,0.0,0.0
+position,SFD joint,22,upper_mass,0.0,0.013277941679295968,0.013277941679295968
+position,SFD joint,22,upper_position,0.18865369400085374,0.18940012986470667,0.0007464358638529234
+position,SFD joint,22,upper_width,0.0,-0.005968426548907793,-0.005968426548907793
+position,SFD fixed kernels,22,upper_mass,0.0,-0.010124009515191101,-0.010124009515191101
+position,SFD fixed kernels,22,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,22,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,22,upper_mass,0.0,0.016929003160171152,0.016929003160171152
+position,SFD oracle kernels,22,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,22,upper_width,0.0,0.0,0.0
+width,SFD joint,22,upper_mass,0.0,0.014342122535221269,0.014342122535221269
+width,SFD joint,22,upper_position,0.0,0.004747172318782966,0.004747172318782966
+width,SFD joint,22,upper_width,0.07,0.06762629957483308,-0.002373700425166922
+width,SFD fixed kernels,22,upper_mass,0.0,-0.07688675122520605,-0.07688675122520605
+width,SFD fixed kernels,22,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,22,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,22,upper_mass,0.0,0.015936293723720962,0.015936293723720962
+width,SFD oracle kernels,22,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,22,upper_width,0.07,0.07,0.0
+mass,SFD joint,23,upper_mass,0.19999999999999996,0.23637602320292994,0.036376023202929986
+mass,SFD joint,23,upper_position,0.0,-0.008970630201960206,-0.008970630201960206
+mass,SFD joint,23,upper_width,0.0,-0.0030539495818383278,-0.0030539495818383278
+mass,SFD fixed kernels,23,upper_mass,0.19999999999999996,0.23859472657663788,0.03859472657663793
+mass,SFD fixed kernels,23,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,23,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,23,upper_mass,0.19999999999999996,0.23859472657663788,0.03859472657663793
+mass,SFD oracle kernels,23,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,23,upper_width,0.0,0.0,0.0
+position,SFD joint,23,upper_mass,0.0,-0.006392554160997765,-0.006392554160997765
+position,SFD joint,23,upper_position,0.18865369400085374,0.19406907123229106,0.005415377231437313
+position,SFD joint,23,upper_width,0.0,-0.002175637376200537,-0.002175637376200537
+position,SFD fixed kernels,23,upper_mass,0.0,-0.027859048468459047,-0.027859048468459047
+position,SFD fixed kernels,23,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,23,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,23,upper_mass,0.0,-0.004165164801179788,-0.004165164801179788
+position,SFD oracle kernels,23,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,23,upper_width,0.0,0.0,0.0
+width,SFD joint,23,upper_mass,0.0,0.03696375893078113,0.03696375893078113
+width,SFD joint,23,upper_position,0.0,-0.0015661554206573558,-0.0015661554206573558
+width,SFD joint,23,upper_width,0.07,0.07310957296974284,0.0031095729697428326
+width,SFD fixed kernels,23,upper_mass,0.0,-0.07066335536811874,-0.07066335536811874
+width,SFD fixed kernels,23,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,23,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,23,upper_mass,0.0,0.036063858073820454,0.036063858073820454
+width,SFD oracle kernels,23,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,23,upper_width,0.07,0.07,0.0
+mass,SFD joint,24,upper_mass,0.19999999999999996,0.17794213793284958,-0.02205786206715038
+mass,SFD joint,24,upper_position,0.0,-0.0042082126187267255,-0.0042082126187267255
+mass,SFD joint,24,upper_width,0.0,0.0007796056509367238,0.0007796056509367238
+mass,SFD fixed kernels,24,upper_mass,0.19999999999999996,0.17691572825026125,-0.023084271749738705
+mass,SFD fixed kernels,24,upper_position,0.0,0.0,0.0
+mass,SFD fixed kernels,24,upper_width,0.0,0.0,0.0
+mass,SFD oracle kernels,24,upper_mass,0.19999999999999996,0.17691572825026125,-0.023084271749738705
+mass,SFD oracle kernels,24,upper_position,0.0,0.0,0.0
+mass,SFD oracle kernels,24,upper_width,0.0,0.0,0.0
+position,SFD joint,24,upper_mass,0.0,-0.01598701495082111,-0.01598701495082111
+position,SFD joint,24,upper_position,0.18865369400085374,0.18625083326559422,-0.0024028607352595266
+position,SFD joint,24,upper_width,0.0,0.003619981139290518,0.003619981139290518
+position,SFD fixed kernels,24,upper_mass,0.0,-0.04635008079978503,-0.04635008079978503
+position,SFD fixed kernels,24,upper_position,0.18865369400085374,0.0,-0.18865369400085374
+position,SFD fixed kernels,24,upper_width,0.0,0.0,0.0
+position,SFD oracle kernels,24,upper_mass,0.0,-0.01892314461583111,-0.01892314461583111
+position,SFD oracle kernels,24,upper_position,0.18865369400085374,0.18865369400085374,0.0
+position,SFD oracle kernels,24,upper_width,0.0,0.0,0.0
+width,SFD joint,24,upper_mass,0.0,-0.02556506585530771,-0.02556506585530771
+width,SFD joint,24,upper_position,0.0,-0.008071822807066142,-0.008071822807066142
+width,SFD joint,24,upper_width,0.07,0.08426234498366551,0.014262344983665506
+width,SFD fixed kernels,24,upper_mass,0.0,-0.14084292063672227,-0.14084292063672227
+width,SFD fixed kernels,24,upper_position,0.0,0.0,0.0
+width,SFD fixed kernels,24,upper_width,0.07,0.0,-0.07
+width,SFD oracle kernels,24,upper_mass,0.0,-0.03420337228119841,-0.03420337228119841
+width,SFD oracle kernels,24,upper_position,0.0,0.0,0.0
+width,SFD oracle kernels,24,upper_width,0.07,0.07,0.0

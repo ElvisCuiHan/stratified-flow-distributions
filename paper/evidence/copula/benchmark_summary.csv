@@ -1,0 +1,20 @@
+protocol_version,scenario,scenario_family,method,mean_heldout_log_score,se_heldout_log_score,rank_within_scenario,mean_fit_seconds,mean_eval_seconds,reps,failure_rate,warning_rate
+jmlr_frozen_benchmark_v1,clayton_copula_gamma_5d,external_copula_full_dimensional,Copula oracle,-5.535338684041106,0.02512230121655705,1,0.0,0.0031767251901328565,5,0.0,0.0
+jmlr_frozen_benchmark_v1,clayton_copula_gamma_5d,external_copula_full_dimensional,GMM-16,-6.259919238083306,0.041298000171313846,3,0.11308041657321155,0.0014425416011363268,5,0.0,1.0
+jmlr_frozen_benchmark_v1,clayton_copula_gamma_5d,external_copula_full_dimensional,GMM-2,-6.70326805111286,0.0554903429322233,6,0.010707733011804521,0.0001902582123875618,5,0.0,0.0
+jmlr_frozen_benchmark_v1,clayton_copula_gamma_5d,external_copula_full_dimensional,GMM-4,-6.373220359110863,0.037032256193630785,4,0.030294299800880255,0.0003430914133787155,5,0.0,1.0
+jmlr_frozen_benchmark_v1,clayton_copula_gamma_5d,external_copula_full_dimensional,GMM-8,-6.180433552734311,0.023334528785126634,2,0.060433674789965156,0.000664608390070498,5,0.0,1.0
+jmlr_frozen_benchmark_v1,clayton_copula_gamma_5d,external_copula_full_dimensional,Gaussian,-7.51229618503478,0.0407946450957277,7,9.74331982433796e-05,0.00012670818250626326,5,0.0,0.0
+jmlr_frozen_benchmark_v1,clayton_copula_gamma_5d,external_copula_full_dimensional,KDE,-6.599341438300193,0.048681447330096925,5,0.0001756582409143448,0.028626391384750604,5,0.0,0.0
+jmlr_frozen_benchmark_v1,gaussian_copula_lognormal_10d,external_copula_full_dimensional,Copula oracle,-7.528811812586952,0.04096121082567356,1,0.0,0.008256408385932446,5,0.0,0.0
+jmlr_frozen_benchmark_v1,gaussian_copula_lognormal_10d,external_copula_full_dimensional,GMM-16,-9.99178790461607,0.07671493041273904,5,0.14783949998673052,0.0015726915560662746,5,0.0,1.0
+jmlr_frozen_benchmark_v1,gaussian_copula_lognormal_10d,external_copula_full_dimensional,GMM-2,-9.652529995012069,0.08102248756794364,4,0.017269241623580456,0.0003285583574324846,5,0.0,0.0
+jmlr_frozen_benchmark_v1,gaussian_copula_lognormal_10d,external_copula_full_dimensional,GMM-4,-9.238876998043361,0.0774469910168985,2,0.044359941803850236,0.0008068666327744722,5,0.0,0.2
+jmlr_frozen_benchmark_v1,gaussian_copula_lognormal_10d,external_copula_full_dimensional,GMM-8,-9.345241049753774,0.10045728991850106,3,0.12460633360315114,0.0010842663934454322,5,0.0,1.0
+jmlr_frozen_benchmark_v1,gaussian_copula_lognormal_10d,external_copula_full_dimensional,Gaussian,-10.8738446698408,0.06507243823175328,6,0.00011520837433636189,0.00016546640545129777,5,0.0,0.0
+jmlr_frozen_benchmark_v1,t_copula_t_margins_10d,external_copula_full_dimensional,Copula oracle,-14.102701434524334,0.06104691217205346,1,0.0,0.020388358552008868,5,0.0,0.0
+jmlr_frozen_benchmark_v1,t_copula_t_margins_10d,external_copula_full_dimensional,GMM-16,-15.907495770348948,0.12169392305675199,6,0.16172838325146585,0.0016021916177123784,5,0.0,1.0
+jmlr_frozen_benchmark_v1,t_copula_t_margins_10d,external_copula_full_dimensional,GMM-2,-14.374811429319163,0.06298979831619812,2,0.01613322477787733,0.0005921417847275734,5,0.0,0.0
+jmlr_frozen_benchmark_v1,t_copula_t_margins_10d,external_copula_full_dimensional,GMM-4,-14.447495780545097,0.06457275842450794,3,0.060405408428050575,0.0007379835937172174,5,0.0,0.4
+jmlr_frozen_benchmark_v1,t_copula_t_margins_10d,external_copula_full_dimensional,GMM-8,-14.856539122785989,0.07896518609493447,4,0.11897930018603801,0.001017575175501406,5,0.0,1.0
+jmlr_frozen_benchmark_v1,t_copula_t_margins_10d,external_copula_full_dimensional,Gaussian,-15.271542955898255,0.10271778998627072,5,0.00010366661008447409,0.0006741919787600636,5,0.0,0.0

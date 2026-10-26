@@ -1,0 +1,328 @@
+\section{Fixed-Kernel Identification and Information}
+\label{app:proof}
+The result in Proposition~\ref{prop:identification} holds for arbitrary normalized
+nonnegative kernels under a fixed reference measure, including mixed measures.
+It is conditional on their scientific grouping and on an interior weight.
+
+If $p_w=p_{w'}$, then $v=w-w'\in\mathcal V_0$. Orthogonality of $\zeta$ therefore
+makes $T_\zeta(w)=T_\zeta(w')$. Conversely, if $\zeta^\top v\ne0$ for some
+$v\in\mathcal V_0$, every interior $w$ admits a sufficiently small nonzero
+$t$ such that $w+tv$ stays in the simplex interior. Its density is unchanged,
+but its target changes by $t\zeta^\top v$. This proves both directions.
+
+For positive $w$, $f_j/p_w\le 1/w_j$ on the density support. Each score
+component in (\ref{eq:information}) is therefore square integrable. For
+$a\in\R^{K-1}$, $a^\top I_wa=0$ exactly when
+$\sum_{j<K}a_j(f_j-f_K)=0$ almost everywhere. Its corresponding full null
+direction is $(a_1,\ldots,a_{K-1},-\sum_{j<K}a_j)$. The target annihilates this
+null space exactly when $\beta_\zeta$ belongs to the range of $I_w$.
+When it does, $\phi_* =\beta_\zeta^\top I_w^+U$ is centered and satisfies
+$\E_w(\phi_*U)=\beta_\zeta$. Any other centered square-integrable $\phi$ with
+the same covariance has $\phi-\phi_*$ orthogonal to the score span. Hence
+$\E_w(\phi^2)=\E_w(\phi_*^2)+\E_w\{(\phi-\phi_*)^2\}$, giving the bound.
+This is an influence-function variance bound, not a claim that a particular
+adaptive estimator attains it. Its sample-mean asymptotic variance factor is
+conditional on fixed kernels; nuisance estimation is not covered.
+
+\paragraph{Penalized uniqueness and likelihood identification.}
+For $\tau>0$ and every $r_j>0$, consider
+\[
+ L_n(w)=\sum_i\log\{\textstyle\sum_jw_jf_j(x_i)\}
+                   +\tau\sum_j r_j\log w_j.
+\]
+Assume all kernel values at observed points are finite, and each point has
+positive density under some kernel. The prior
+term forces the objective to minus infinity at the boundary; its Hessian adds
+strictly positive curvature to the negative log likelihood. There is a unique
+interior penalized maximizer, even for duplicate kernels. This optimization
+fact does not alter the likelihood null space or establish branch-mass
+identification. An empirical SVD can diagnose numerical rank for chosen
+evaluation points, but it cannot prove population identification.
+
+\section{Geometry, Coordinates, and a Temporal Extension}
+\label{app:geometry}
+\begin{proposition}[Coordinate transformation of branch targets]
+\label{prop:coordinate-transport}
+Let $\gamma_b:[0,1]\to\R^d$ be a one-to-one regular $C^1$ curve.
+For an increasing $C^1$ diffeomorphism $s=\varphi(u)$, put
+\[
+ \widetilde\gamma_b(u)=\gamma_b\{\varphi(u)\},\qquad
+ \widetilde h_b(u)=h_b\{\varphi(u)\}\varphi'(u),\qquad
+ \widetilde K_b(\cdot\mid u)=K_b\{\cdot\mid\varphi(u)\}.
+\]
+Substitution in the branch integral leaves its probability law unchanged.
+For an exact branch, the chain rule gives
+\[
+ \frac{\widetilde h_b(u)}{\|\dot{\widetilde\gamma}_b(u)\|}
+ =\frac{h_b\{\varphi(u)\}}{\|\dot\gamma_b\{\varphi(u)\}\|},
+\]
+which is the same density per unit physical arc length. Normalized arc length
+is
+\[
+ u_b(s)=\frac{\int_0^s\|\dot\gamma_b(v)\|\,dv}
+                  {\int_0^1\|\dot\gamma_b(v)\|\,dv}.
+\]
+The distribution of $u_b(S)$ is invariant to the coordinate transport above
+when branch origin and orientation agree. Shared branch correspondence is
+still needed for a comparison across groups. In contrast, the transformed
+coordinate mean is
+$\int_0^1\varphi^{-1}(s)h_b(s)\,ds$ and need not equal the original mean.
+\end{proposition}
+\begin{proof}
+Substitute $s=\varphi(u)$ in the branch integral and coordinate mean.
+The chain rule gives
+$\|\dot{\widetilde\gamma}_b(u)\|
+=\|\dot\gamma_b\{\varphi(u)\}\|\varphi'(u)$, proving both the intrinsic
+density and normalized arc-length identities.
+\end{proof}
+For a full-rank counterexample, take $\gamma(s)=(s,0)$, $h(s)=1$ and
+$K(dx\mid s)=\Normal(dx;(s,0),\sigma^2I_2)$, with $\sigma>0$.
+For $\kappa\ne0$, put
+\[
+ \varphi_\kappa(u)=\frac{e^{\kappa u}-1}{e^\kappa-1},\qquad
+ \widetilde h_\kappa(u)=\frac{\kappa e^{\kappa u}}{e^\kappa-1},\qquad
+ \widetilde\gamma_\kappa=\gamma\circ\varphi_\kappa.
+\]
+Every $\kappa$ gives the same observed law, but the transformed coordinate
+mean is $e^\kappa/(e^\kappa-1)-1/\kappa$, with limit $1/2$ and derivative
+$1/12$ at zero. Thus fixed endpoints and positive tube covariance alone do
+not identify a coordinate mean. On a self-overlapping immersion,
+the density relative to Hausdorff measure sums the Jacobian-adjusted
+contributions over coordinate preimages; Equation~\ref{eq:intrinsic} uses
+the one-to-one case.
+
+\paragraph{Skeleton and observed support.}
+A finite collection of curve edges and declared vertices can be organized
+as a metric graph, allowing endpoints, junctions, and cycles. This describes
+the latent representation. A positive-mass full-rank Gaussian component has
+support throughout $\R^d$, so the topology of a noisy observed distribution
+differs from the connectivity of its centerlines. The formulation here uses
+declared structure and does not provide a topology-recovery theorem.
+
+The tangent-normal covariance in Equation~\ref{eq:frame} is Euclidean.
+The locally adaptive normal distribution (LAND) instead uses a learned
+Riemannian metric, geodesic distance, and normalization relative to
+Riemannian volume \citep{arvanitidis2016land}. To use such a distribution
+as an SFD kernel, its law must be expressed relative to the same declared
+reference measure as the other components.
+
+\input{fermat_example.tex}
+\FloatBarrier
+
+\subsection{A Temporal Extension}
+A possible temporal model would couple the observation kernels to a process
+on an oriented metric graph. An edge occupancy density $\rho_b(s,t)$ could
+satisfy
+\[
+ \partial_t\rho_b=-\partial_s j_b,\qquad
+ j_b=v_b\rho_b-\partial_s(D_b\rho_b),\qquad D_b>0.
+\]
+Such a model also requires an initial law, probability-conserving vertex
+conditions, and any vertex-mass dynamics. Graph diffusion has established
+generator and vertex-boundary constructions \citep{kostrykin2012brownian}.
+Estimating drift, diffusion, or passage times would require time-ordered
+trajectories, sampling intervals, trajectory identifiers, and a treatment of
+sampling bias. Static occupancy alone does not identify those quantities.
+This is an extension of the observation model, not a fitted result in this paper.
+
+\FloatBarrier
+
+\input{visual_examples.tex}
+
+\input{theory_calculus.tex}
+\input{theory_inference.tex}
+\input{theory_numerics.tex}
+\input{theory_tails.tex}
+
+\section{Experiment Details}
+\label{app:experiments}
+The following settings define the four studies in Section~\ref{sec:experiments}.
+Numerical summaries use all recorded repetitions and retain the convergence
+status of every selected fit. The supplementary tables report the full
+prespecified density and marker controls.
+
+\paragraph{Known-skeleton weight diagnostic.}
+The five generating laws and component families are fixed before fitting.
+Each of 25 repetitions uses 1000 training and 1000 independent test
+observations. EM estimates component weights with a 64-node tube grid,
+a maximum of 300 iterations, maximum-weight-change tolerance $10^{-6}$
+and minimum weight $10^{-12}$. Gaussian, KDE and GMM controls share the
+observations; GMM sizes are $2,4,8,16,32$, with maximum 80 iterations,
+tolerance $10^{-5}$ and covariance regularization $10^{-5}$.
+The base seed is 20260623, with repetition offset $10000$ and
+zero-based scenario offset $101$. The archived per-run and summary tables
+retain every method, convergence status and recovery result. This experiment
+does not estimate the skeleton, tube width or latent-coordinate error.
+
+\paragraph{Two-arm study.}
+The location $\mu_b^{\mathrm{loc}}$ is a truncated-normal parameter, not the
+coordinate mean. The mean-position contrast changes it from $0.5$ to $0.7$
+at scale $0.16$ on $[0,1]$, giving a generating mean contrast of about $0.189$.
+Longitudinal convolution with tangent Gaussian noise has a closed form.
+The direct optimizer is L-BFGS-B with maxiter 300, ftol $10^{-10}$, gtol
+$10^{-6}$, maxls 40, mass-logit bounds $[-5,5]$, location bounds $[0.1,0.9]$,
+and width bounds $[0.025,0.3]$. Every method and repetition is retained below;
+the oracle row is a generating-density reference, not a fitted competitor.
+The archived score rows also retain the observable $\Pbb(X_2>0)$ comparison
+and all convergence flags, including GMM iteration limits.
+
+\paragraph{Geometry and noise study.}
+The learned directions are bounded to $[5,75]$ and $[-75,-5]$ degrees. Three
+starts use angle pairs $\pm20$, $\pm35$, $\pm50$ degrees, with the recorded
+location and width starts. L-BFGS-B uses maxiter 500 and the same tolerances.
+The best finite training objective selects the fit. GMM uses three separately
+seeded starts, covariance regularization $10^{-5}$, maxiter 2000 and tol
+$10^{-5}$. KDE chooses $0.5$, $1$, or $2$ times Scott's bandwidth on a
+deterministic 80/20 inner split, then refits on all training rows. The outer
+test set is never used for selection.
+
+\paragraph{PBMC prediction diagnostic.}
+The analysis uses the public 10x PBMC3k filtered count matrix. Filtering keeps
+genes detected in at least three
+training cells, and selects the 1000 largest training log-CP10k variances,
+breaking ties by gene index. Training means and SDs scale the data, values
+are clipped to $[-10,10]$, and randomized PCA has two components. All
+18 predeclared marker genes are excluded from predictor normalization and
+selection. Marker-group means use the same nonmarker library size. A cell is
+positive when the B-marker mean log-CP10k is at least $0.5$ and strictly
+exceeds each competing marker-group mean. This fixed rule precedes the
+repeated analysis.
+
+The MST model uses 24 landmarks and 12 quadrature nodes with the archived
+width/residual heuristic. Its small-mass-change stopping rule is not a joint
+objective certificate. All density controls and readouts share the outer
+train/test representation. Logistic predictors select inverse L2 penalty
+from $\{0.01,0.1,1,10\}$ on the same stratified 75/25 inner training split,
+then refit all outer training cells. Dropping the eighth GMM posterior
+coordinate removes exact simplex redundancy. The two-coordinate density and
+marker readouts concern cell-level prediction within one collection;
+independent-donor and externally annotated validation are separate tasks.
+
+\section{Parameter Intervals for the Saved Fits}
+\label{app:intervals}
+The post-hoc interval diagnostic reuses all \GeoFitCount{} saved SFD fits
+from the geometry/noise study: 600 use six parameters and 300 include the
+two estimated angles. The chart contains two mass logits relative to the
+residual, two coordinate-normal locations, two log transverse SDs, and the
+two angles when active. The origin, coordinate/tangent scales, residual law,
+and two-arm family remain supplied. No fit is repeated, and no test
+observations enter the interval calculation.
+
+Let $H=\left.\nabla_\theta^2\{-\ell_n(\theta)/n\}\right|_{\theta=\hat\theta}$
+and $U_i=\left.\nabla_\theta\log p_\theta(X_i)\right|_{\theta=\hat\theta}$.
+With $J=n^{-1}\sum_i U_iU_i^\top$, the two covariance estimates are
+\[
+ \widehat V_{\mathrm{info}}=H^{-1}/n,\qquad
+ \widehat V_{\mathrm{sand}}=H^{-1}JH^{-\top}/n.
+\]
+The inverse uses the complete fitted chart; estimated angles are not held
+fixed. For a target $\psi$, the delta-method variance is
+$\dot\psi(\hat\theta)\widehat V\dot\psi(\hat\theta)^\top$.
+The mass gradient uses the softmax row. The truncated-coordinate-mean
+derivative with respect to its normal location is
+$\operatorname{Var}(S\mid Z=+)/0.16^2$; the SD derivative with respect to
+log SD is $\sigma_+$. Contrasts add the independent alternative and reference
+variances. Intervals are untransformed normal Wald intervals without clipping.
+The three contrasts within a repetition share the reference fit.
+
+\paragraph{Numerical checks.}
+The original 300 training arrays regenerate identically. Source-version,
+saved-objective and target checks precede inference. Central differences of
+the average-loss gradient use relative steps $10^{-4}$, $5\times10^{-5}$,
+and $2.5\times10^{-5}$. Relative Hessian changes and asymmetry must be at
+most $5\times10^{-5}$; the information eigenvalues must exceed $10^{-8}$
+and the condition number must be below $10^8$ in the stated chart. Fit and
+perturbed parameters remain interior, and maximum average-score magnitude
+must be at most $10^{-4}$. No ridge or pseudoinverse repairs a failed matrix.
+All 900 saved fits pass these gates.
+
+An independent audit constructs scalar-likelihood Hessians using relative
+steps $4\times10^{-4}$ and $2\times10^{-4}$ with Richardson cancellation.
+It uses numerical individual log-density derivatives and target derivatives
+at step $10^{-5}$, rather than the analytic scores or production target
+Jacobian. All group-target standard errors agree with the saved-fit
+calculation under mixed relative/absolute tolerance $5\times10^{-5}$ and
+$10^{-9}$. Coverage, contrast variances and every summary cell are
+independently recounted. The complete record retains
+\GeoIntervalCount{} group/contrast intervals and \GeoSummaryCount{} summary
+cells, each with 25 repetitions and zero invalid fits. Intervals from the
+same fit or shared reference are not pooled as independent trials.
+
+\paragraph{Interpretation.}
+Coverage refers to the generating targets, including under rotated geometry
+or Student-$t_5$ noise. A sandwich covariance estimates variation around a
+pseudo-true target under the corresponding regularity assumptions; it does
+not remove its discrepancy from the generating parameter. Figure~\ref{fig:intervals}
+and Table~\ref{tab:geometry-intervals} show every intended contrast/target
+pair. The accompanying summary data also retain all group parameters and
+cross-effects. With 25 repetitions, coverage is imprecisely estimated;
+even a count of 25/25 does not establish nominal calibration. This diagnostic
+accounts for two estimated directions, not topology selection or a general
+learned skeleton.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth,clip]{figures/geometry_interval_coverage.pdf}
+\caption{Post-hoc coverage of nominal 95\% parameter intervals for the
+geometry/noise study. Columns show the three intended mass, coordinate-mean
+and transverse-SD contrasts; rows show Gaussian noise, overlapping arms,
+and equal-SD Student-$t_5$ noise. Points and counts use all 25 repetitions.
+Bars are exact binomial 95\% Monte Carlo intervals for coverage, not parameter
+intervals; the dashed line marks 0.95. Both covariance choices use the same
+saved fit and complete six/eight-parameter chart. The 54 displayed cells
+follow the prespecified contrast/target pairs; the full numerical record
+retains all 378 cells.}
+\label{fig:intervals}
+\end{figure}
+
+\begin{table}[tbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{All intended contrast/target pairs in the saved geometry fits.
+Info. and Sand. give covered intervals out of 25 for information and sandwich
+covariance. Bias is the mean estimate minus the generating contrast; it is
+the same for both covariance choices. SE columns are mean parameter standard
+errors, not Monte Carlo SEs. Position is the truncated coordinate mean; SD
+is transverse spread. Cross-effects remain in the accompanying complete data.}
+\label{tab:geometry-intervals}
+\input{tables/geometry_intervals.tex}
+\end{table}
+
+\paragraph{Fixed directions in the original mechanism study.}
+A separate post-hoc calculation uses all 100 joint fits from the earlier
+mechanism study. Its complete six-parameter covariance gives 300 group-target
+and 225 contrast-target intervals with no invalid fits. Table~\ref{tab:fixed-intervals}
+retains all 21 summary cells. These are different saved fits from those in
+the geometry/noise study; their repetitions are not pooled.
+
+\begin{table}[tbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Complete fixed-direction joint-fit interval diagnostic. Covered
+counts use 25 repetitions per row. MC intervals are exact binomial 95\%
+intervals for coverage; empirical SD and mean SE concern the parameter or
+contrast estimator. Contrast rows subtract the independently sampled
+reference group. None of these rows describes learned-direction uncertainty.}
+\label{tab:fixed-intervals}
+\input{tables/fixed_intervals.tex}
+\end{table}
+\FloatBarrier
+
+\section{All Prespecified Density and Marker Controls}
+\label{app:controls}
+Every cell below is mean (Monte Carlo SE) over 25 runs. Density scores are
+in nats per observation; higher is better. Marker log loss is lower-is-better.
+PBMC differences are paired within split, and their SEs describe split
+variability in this one collection. No independent-subject uncertainty is
+estimated. Simulation score tables retain the same observations per method;
+the supplied structural information differs between the SFD ablations and
+generic density controls as described in the main text.
+
+\begingroup
+\let\paragraph\subsubsection
+\input{evidence_tables.tex}
+\endgroup
+
+\input{external_density_controls.tex}

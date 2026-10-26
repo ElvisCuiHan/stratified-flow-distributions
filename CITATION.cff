@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying preprint when using this software."
+type: software
+title: "Stratified Flow Distributions"
+authors:
+  - family-names: Cui
+    given-names: Elvis Han
+version: 0.1.0
+date-released: 2026-10-26
+url: "https://github.com/ElvisCuiHan/stratified-flow-distributions"
+license: MIT
+preferred-citation:
+  type: unpublished
+  title: "Stratified Flow Distributions: Mixed-Support Density Models with Explicit Strata"
+  authors:
+    - family-names: Cui
+      given-names: Elvis Han
+  year: 2026
+  url: "https://github.com/ElvisCuiHan/stratified-flow-distributions"

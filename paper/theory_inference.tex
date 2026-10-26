@@ -1,0 +1,146 @@
+\section{Regular Likelihood Expansion and Contrast Tests}
+\label{app:regular-theory}
+This section proves Theorem~\ref{thm:regular-finite-sfd} for the whole
+estimated finite chart, rather than holding estimated noise or geometry
+fixed. The fixed component set and common support are part of its assumptions.
+
+\subsection{Conditions for Theorem~\ref{thm:regular-finite-sfd}}
+\label{app:regular-conditions}
+Let $X_1,\ldots,X_n$ be iid from $P_{\theta_0}$ in a finite-dimensional
+SFD family $p_\theta=dP_\theta/d\nu$. In an open neighborhood of the
+interior parameter $\theta_0$, assume:
+\begin{enumerate}
+\item[\textup{(R1)}] The component set, atom supports, coordinate domains and effective
+support are fixed, with one common dominating measure $\nu$.
+\item[\textup{(R2)}] The chart is identifiable, active weights are bounded away from zero,
+and active Gaussian tube covariance eigenvalues have positive lower and
+finite upper bounds.
+\item[\textup{(R3)}] The log density is $C^3$ almost everywhere on its support, its first
+three derivatives have integrable local uniform envelopes, and derivatives
+pass through branch integrals and integration against $\nu$.
+\item[\textup{(R4)}] The score $U_0=\nabla\log p_{\theta_0}$ has finite, positive-definite
+information $I_0=\E_{\theta_0}(U_0U_0^\top)$.
+\item[\textup{(R5)}] An interior local likelihood maximizer $\hat\theta_n$ exists in this
+chart with probability tending to one and is consistent for $\theta_0$.
+\end{enumerate}
+Consistency in (R5) is a separate input, not a consequence of local
+smoothness. Data-selected topology, zero weights, moving singular supports
+and covariance collapse require separate arguments. Transfer from a
+numerical likelihood also needs score-error control at the root-$n$ scale
+(Appendix~\ref{app:numerical-theory}).
+
+\subsection{Proof of the Regular Finite-SFD Likelihood Theorem}
+Write $P_nf=n^{-1}\sum_i f(X_i)$,
+$U_0(x)=\nabla\log p_{\theta_0}(x)$ and
+$H_0(x)=\nabla^2\log p_{\theta_0}(x)$. Differentiating normalization twice,
+using the permitted integration interchanges, gives
+\[
+ \E_{\theta_0}U_0=0,\qquad
+ \E_{\theta_0}H_0=-\E_{\theta_0}(U_0U_0^\top)=-I_0.
+\]
+The finite information assumption gives the score central limit theorem,
+$\Delta_n=n^{-1/2}\sum_iU_0(X_i)\rightsquigarrow\Normal(0,I_0)$.
+For any fixed $M<\infty$, Taylor's theorem and the third-derivative envelope
+$M_3$ give, uniformly over $\|u\|\le M$,
+\[
+ \ell_n(\theta_0+u/\sqrt n)-\ell_n(\theta_0)
+ =u^\top\Delta_n+\tfrac12u^\top(P_nH_0)u+R_n(u),
+ \qquad \sup_{\|u\|\le M}|R_n(u)|
+       \le C_Mn^{-1/2}P_nM_3=o_p(1).
+\]
+Since $P_nH_0\to_p-I_0$, this is the uniform local quadratic expansion
+\begin{equation}
+ \ell_n(\theta_0+u/\sqrt n)-\ell_n(\theta_0)
+       =u^\top\Delta_n-\tfrac12u^\top I_0u+o_p(1).
+ \label{eq:local-quadratic}
+\end{equation}
+Consistency and interiority give $\nabla\ell_n(\hat\theta_n)=0$ in a
+neighborhood of $\theta_0$ with probability tending to one. Use the
+segment-averaged Hessian, not a common scalar mean-value point:
+\[
+ \overline H_n=\frac1n\int_0^1
+   \nabla^2\ell_n\{\theta_0+t(\hat\theta_n-\theta_0)\}\,dt.
+\]
+The fundamental theorem of calculus gives exactly
+\[
+ 0=\Delta_n+\overline H_n\sqrt n(\hat\theta_n-\theta_0).
+\]
+The third-derivative envelope bounds
+$\|\overline H_n-P_nH_0\|$ by a constant times
+$\|\hat\theta_n-\theta_0\|P_nM_3=o_p(1)$, so
+$\overline H_n\to_p-I_0$. Its inverse is bounded in probability.
+Inverting the score equation first establishes root-$n$ consistency, then
+the linear representation and Gaussian limit in
+Equation~\ref{eq:regular-limit}. Differentiability of $\psi$ gives
+\[
+ \sqrt n\{\psi(\hat\theta_n)-\psi(\theta_0)\}
+ =\dot\psi(\theta_0)I_0^{-1}\Delta_n+o_p(1),
+\]
+and hence the stated covariance. This proves the theorem.
+
+\subsection{Smooth Contrasts}
+For fixed component labels and coordinates, smooth targets include
+$\pi_b$, $\sum_{a\in A_0}\pi_a$, $\int sh_b(s)\,ds$ and
+$\int\operatorname{tr}\{\Sigma_{\perp,b}(s)\}h_b(s)\,ds$ when their
+parameter derivatives exist. Independent group-specific fits can be combined
+in one product chart; contrast variances then add the group contributions.
+Coordinate-dependent targets also use the conventions of
+Proposition~\ref{prop:coordinate-transport}.
+
+\begin{proposition}[Regular tests for SFD contrasts]
+\label{prop:regular-tests}
+Under Theorem~\ref{thm:regular-finite-sfd}, let
+$h:\Theta\to\R^q$ be $C^2$ near $\theta_0$ with full row-rank
+$A=\dot h(\theta_0)$, and suppose $h(\theta_0)=0$. Let a constrained
+local likelihood maximizer $\tilde\theta_n$ be consistent on this interior
+null manifold, and let $\hat V_n\to_p I_0^{-1}$. Then
+\begin{align*}
+ W_n&=n h(\hat\theta_n)^\top
+  \{\dot h(\hat\theta_n)\hat V_n\dot h(\hat\theta_n)^\top\}^{-1}
+   h(\hat\theta_n)\ \rightsquigarrow\ \chi_q^2,\\
+ \Lambda_n&=2\{\ell_n(\hat\theta_n)-\ell_n(\tilde\theta_n)\}
+                  \ \rightsquigarrow\ \chi_q^2.
+\end{align*}
+\end{proposition}
+\begin{proof}
+Put $B=AI_0^{-1}A^\top\succ0$. The delta method gives
+$\sqrt n h(\hat\theta_n)\rightsquigarrow\Normal(0,B)$, and the estimated
+middle covariance tends to $B$. Its quadratic form proves the Wald result.
+
+For the likelihood ratio, the $C^2$ full-rank null is locally a smooth
+coordinate chart by the implicit function theorem. The same consistent
+local-score argument as above, restricted to that chart, yields root-$n$
+consistency of the constrained estimator. Its limiting tangent space is
+$\mathcal T=\{u:Au=0\}$. Let $z_n=I_0^{-1}\Delta_n$ and define its
+$I_0$-orthogonal projection
+\[
+ P_{\mathcal T}z=z-I_0^{-1}A^\top B^{-1}Az.
+\]
+Completing the square in Equation~\ref{eq:local-quadratic} shows that its
+unrestricted and constrained maximizers are respectively $z_n$ and
+$P_{\mathcal T}z_n$, up to $o_p(1)$. Root-$n$ consistency allows the
+uniform compact expansion to be evaluated at both random maximizers.
+Twice their quadratic maximum difference is therefore
+\[
+ \Lambda_n=(Az_n)^\top B^{-1}(Az_n)+o_p(1).
+\]
+Since $Az_n\rightsquigarrow\Normal(0,B)$, this tends to $\chi_q^2$.
+\end{proof}
+
+The $C^2$ null-chart assumption is stated explicitly for the likelihood-ratio
+argument. A first-order differentiable contrast suffices for the Wald part.
+These calibrations concern regular likelihood estimation in the specified
+model; they do not calibrate zero weights, selected topology or singular
+covariance limits.
+
+\paragraph{Misspecification and penalties.}
+For a consistent interior estimator targeting a regular population optimum
+$\theta_*$ under a possibly misspecified law, an analogous centered-score
+expansion gives covariance $H^{-1}JH^{-\top}$, where
+$H=-\E\nabla^2\log p_{\theta_*}(X)$ and
+$J=\E\{U_{\theta_*}(X)U_{\theta_*}(X)^\top\}$. This requires the
+corresponding smoothness, nonsingularity and central-limit assumptions at
+that target. A penalty with gradient $o_p(\sqrt n)$ and Hessian $o_p(n)$
+locally leaves the first-order limit unchanged. A non-negligible penalty
+instead changes the expansion or its centering. Neither a sandwich estimate
+nor prior curvature repairs likelihood nonidentification.

@@ -1,0 +1,636 @@
+\documentclass[10pt]{article}
+\pdfminorversion=7
+\usepackage[preprint]{tmlr}
+\usepackage{amsmath,amssymb,amsthm,graphicx,booktabs,placeins}
+\usepackage{algorithm,algpseudocode}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{CJKutf8}
+% Keep the CJK package's Unicode map without a second pdfTeX-generated map.
+\ifdefined\pdfnobuiltintounicode
+  \makeatletter
+  \AddToHook{cmd/CJK@addcmap/after}{\pdfnobuiltintounicode\font@name}
+  \makeatother
+\fi
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Normal}{\mathcal N}
+\newcommand{\numSE}[2]{\ensuremath{#1\;(#2)}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[proposition]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{plain}
+\newcommand{\SFDChineseName}{%
+  \begingroup\normalfont\begin{CJK*}{UTF8}{gkai}雄起流分布\end{CJK*}\endgroup}
+\input{evidence_macros.tex}
+\input{uncertainty_macros.tex}
+\hypersetup{pdftitle={Stratified Flow Distributions: Branch Mass, Occupancy, and Noise},
+ pdfauthor={Elvis Han Cui},pdfsubject={Preprint with theoretical and experimental appendices; not peer reviewed}}
+\lhead{Preprint. Not peer reviewed.}
+\title{Stratified Flow Distributions:\\Branch Mass, Occupancy, and Noise}
+\author{Elvis Han Cui\thanks{AI-assisted tools were used in manuscript
+drafting and editing, code development, and numerical checks. The author
+is responsible for the scientific content and its verification.}\\
+Department of Biostatistics, University of California, Los Angeles\\
+Los Angeles, CA, USA\\[0.3em]
+Kuntuo, an IQVIA Company\\
+Hangzhou, China}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Probability mass, longitudinal occupancy, and transverse noise describe
+different changes in a distribution concentrated near branches. A decrease
+in local density can arise from any of them. Stratified flow distributions
+(SFDs) express these quantities separately through a mixture of declared
+branch laws, localized states, and residual components. We formulate a
+normalized finite-grid likelihood and characterize when a grouped branch
+mass is identified under fixed kernels, including cases with unidentified
+within-branch weights. Controlled two-arm experiments show that fixing a
+changed noise kernel produces a spurious mass contrast, while joint
+estimation separates the changes. Further experiments examine estimated
+directions, overlapping branches, noise misspecification, and parameter
+intervals. A training-fitted PBMC3k analysis evaluates posterior allocation
+as a feature-held-out prediction readout alongside generic mixture controls.
+The results clarify the role of kernel assumptions and geometric grouping
+in interpreting branch probabilities.
+\end{abstract}
+
+\section{What Changed Near the Branch?}
+\label{sec:introduction}
+Consider two samples concentrated near the same branching structure. The
+second sample has a lower density peak near one branch. Three explanations
+are possible: the branch carries less probability, observations have moved
+along it, or their transverse spread has increased. These changes have
+different scientific meanings. For molecular configurations expressed in a
+common coordinate system, a change in the probability of a conformational
+region differs from a change in dispersion within that region. An analysis
+of branch-associated populations should distinguish the two.
+
+The ambiguity is already visible on a straight branch. With tangent and
+normal coordinates $(u,v)$, independent Gaussian observation noise gives the
+weighted component density
+\begin{equation}
+ p_b(u,v)=\pi_b(h_b*\varphi_\epsilon)(u)\varphi_{\sigma_b}(v),
+ \label{eq:motivation}
+\end{equation}
+where $h_b$ is a normalized longitudinal density and $\varphi_\sigma$ is a
+centered Gaussian density with SD $\sigma$. Doubling $\sigma_b$ halves the
+normal peak while preserving the integrated branch mass $\pi_b$. Halving
+$\pi_b$ also halves the peak, but changes that mass. The longitudinal law
+$h_b$ determines where observations accumulate. A geometric centerline or a
+peak-height comparison alone does not distinguish these mechanisms.
+
+We study this question through stratified flow distributions (SFDs), whose
+components attach probability laws to declared atoms, branches, noisy tubes,
+and an ambient residual. The mixture construction supplies a common language
+for the probability mass of a component, its internal coordinate law, and
+its observation kernel. Its usefulness depends on which of these quantities
+the observations identify. In particular, a visually convincing branch does
+not by itself identify its mass when components overlap.
+
+This paper develops an estimand-oriented account of that distinction. A
+normalized finite-grid formulation separates branch mass from numerical
+occupancy weights. A fixed-kernel analysis identifies precisely which
+grouped masses are determined by the mixture density and gives their
+conditional information bound. Repeated experiments then quantify how
+kernel constraints affect mass recovery, how the result changes when two
+branch directions are estimated, and how allocation features compare with
+generic density features in a cell-level prediction task. The main empirical
+result is a specific failure of fixed kernels and its correction by joint
+estimation.
+
+\input{related_work.tex}
+
+\section{The SFD Probability Law}
+\label{sec:law}
+Let $X\in\mathcal X\subseteq\R^d$ be the observed state vector. Finite,
+disjoint index sets $\mathcal A$, $\mathcal B$ and $\mathcal R$ label atoms,
+branches and residual components; write
+$\mathcal K=\mathcal A\cup\mathcal B\cup\mathcal R$.
+A declared skeleton specifies atom locations $\xi_a$, branch maps
+$\gamma_b:\mathcal S_b\to\mathcal X$, and residual components with normalized
+densities $q_r$. Each compact coordinate domain
+$\mathcal S_b\subseteq\R^{m_b}$ has finite positive volume. Let $h_b$ be a
+normalized coordinate density and $K_b(dx\mid s)$ a measurable probability
+kernel. Write $\eta_b$, $\psi_b$ and $\omega_r$ for coordinate-law,
+kernel and residual parameters, respectively, and suppress their arguments
+when unambiguous. All component laws are supported on $\mathcal X$.
+\begin{definition}[Stratified Flow Distribution (SFD)]
+An SFD,\label{def:sfd} with Chinese alias \SFDChineseName, is the probability law
+\begin{equation}
+ P_\theta(dx)=\sum_{a\in\mathcal A}\pi_a\delta_{\xi_a}(dx)
+  +\sum_{b\in\mathcal B}\pi_b\int_{\mathcal S_b}
+           h_b(s;\eta_b)K_b(dx\mid s;\psi_b)\,ds
+  +\sum_{r\in\mathcal R}\pi_rq_r(x;\omega_r)\,dx,
+ \label{eq:law}
+\end{equation}
+with $\pi_c\ge0$ and $\sum_{c\in\mathcal K}\pi_c=1$.
+\end{definition}
+Each component integrates to one. Exact branches use
+$K_b(dx\mid s)=\delta_{\gamma_b(s)}(dx)$;
+full-rank Gaussian tubes use
+$K_b(dx\mid s)=\Normal(dx;\gamma_b(s),\Sigma_b(s))$ with
+$\Sigma_b(s)\in\R^{d\times d}$ positive definite. A localized Gaussian blob
+is a continuous component, distinct from a Dirac atom.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.97\linewidth,clip]{figures/elvis_sfd_four_panel.pdf}
+\caption{An Elvis pose as a 35-component SFD. (a) Photo-guided curves,
+with the cable in teal. (b) Gaussian-tube density with arclength weights
+and covariance $0.014^2I_2$. (c) 18,000 generated observations.
+(d) The same density as a surface: height represents density, not depth.}
+\label{fig:elvis-example}
+\end{figure}
+
+For a fixed finite skeleton, a common dominating measure $\nu$ can include
+Lebesgue measure, atom measures, and coordinate-pushforward measures of exact
+branches. Densities in $p_\theta=dP_\theta/d\nu$ must all use that common
+reference. If every component is regularized, Lebesgue measure suffices.
+The experiments below use full-rank densities in common observed coordinates;
+the mixed-measure formulation also covers exact strata. A moving singular
+support requires a separate common-reference argument.
+
+\begin{proposition}[Master expectation identity]
+\label{prop:expectation}
+For measurable $g$ with $\E_\theta|g(X)|<\infty$,
+\begin{equation}
+\begin{split}
+\E_\theta g(X)
+&=\sum_a\pi_a g(\xi_a)
+ +\sum_b\pi_b\int_{\mathcal S_b}h_b(s)
+                      \int g(x)K_b(dx\mid s)\,ds\\
+&\quad+\sum_r\pi_r\int g(x)q_r(x)\,dx.
+\end{split}
+\label{eq:expectation}
+\end{equation}
+\end{proposition}
+Condition on the component and then its coordinate to obtain the identity;
+Tonelli--Fubini gives its integrable signed form. Appendix~\ref{app:calculus}
+gives normalization, moments, mixed densities, marginals and conditionals.
+
+\paragraph{Three distinct summaries.}
+With component label $Z$ and branch coordinate $S$, the mass and longitudinal
+mean are
+\[
+ \pi_b=\Pbb(Z=b),\qquad
+ \bar s_b=\E(S\mid Z=b)=\int_{\mathcal S_b}s h_b(s)\,ds.
+\]
+The transverse part of the observation kernel describes spread around the
+branch. These are latent-component quantities: overlapping tubes and
+residuals also contribute probability to any observed neighborhood of a
+curve. Consequently, that neighborhood probability generally differs from
+$\pi_b$. Figure~\ref{fig:elvis-example} turns selected image-plane curves
+into a concrete SFD by declaring their masses, coordinate laws and kernels.
+
+\paragraph{Local geometry and coordinate conventions.}
+For a regular curve, let $t_b(s)\in\R^d$ be its unit tangent and
+$N_b(s)\in\R^{d\times(d-1)}$ an orthonormal normal frame. Independent
+centered Gaussian perturbations along and normal to the curve give
+\begin{equation}
+ \begin{split}
+ X&=\gamma_b(S)+t_b(S)\varepsilon_{\parallel,b}
+                      +N_b(S)\varepsilon_{\perp,b},\\
+ \Sigma_b(s)&=\sigma_{\parallel,b}^2(s)t_b(s)t_b(s)^\top
+                +N_b(s)\Sigma_{\perp,b}(s)N_b(s)^\top.
+ \end{split}
+ \label{eq:frame}
+\end{equation}
+For a one-to-one regular $C^1$ exact branch with image $\Gamma_b$, the
+conditional law $P_b=(\gamma_b)_\#\{h_b(s)ds\}$ has arc-length density
+\begin{equation}
+ \frac{dP_b}{d(\mathcal H^1|_{\Gamma_b})}\{\gamma_b(s)\}
+       =\frac{h_b(s)}{\|\dot\gamma_b(s)\|}.
+ \label{eq:intrinsic}
+\end{equation}
+Transporting the coordinate density and kernel under an increasing smooth
+reparameterization preserves the branch law and mass. Coordinate means
+require a common chart; normalized arc length removes coordinate warping
+when origin, orientation, and branch correspondence are shared. Appendix~
+\ref{app:geometry} gives the transformations and distinguishes latent
+skeleton connectivity from the support of noisy observations.
+
+\paragraph{Allocation and conditioning.}
+For regularized component densities $g_c$,
+\begin{equation}
+ \Pbb(Z=c\mid X=x)=\frac{\pi_cg_c(x)}{\sum_{c'}\pi_{c'}g_{c'}(x)}.
+ \label{eq:responsibility}
+\end{equation}
+For an event $A$ of positive probability, its component masses become
+$\pi_cP_c(A)/\sum_{c'}\pi_{c'}P_{c'}(A)$. Marginals, event probabilities,
+and conditional simulation follow from the same mixture law. The fitted
+occupancy describes a static distribution; a model for time-ordered
+observations is needed to estimate transition rates or probability flux.
+
+\begin{proposition}[Single-trajectory tube special case]
+\label{prop:single-tube}
+Setting $\mathcal A=\mathcal R=\emptyset$, $\mathcal B=\{1\}$,
+$\pi_1=1$ and
+$K_1(dx\mid s)=\Normal(dx;\gamma_1(s),\Sigma_1(s))$ with positive-definite
+$\Sigma_1(s)$ gives exactly
+\[
+ p_{\mathrm{tube}}(x)=\int_{\mathcal S_1}h_1(s)
+       \phi_d\{x;\gamma_1(s),\Sigma_1(s)\}\,ds,
+\]
+where $\phi_d$ denotes the $d$-dimensional Gaussian density.
+\end{proposition}
+This follows by substitution in Definition~\ref{def:sfd}.
+Appendix~\ref{app:special-cases} gives the other layer restrictions.
+
+\paragraph{A circular branch and a volcano-shaped density.}
+Take $\gamma(s)=1.2(\cos 2\pi s,\sin 2\pi s)$, uniform $S\in[0,1]$,
+kernel covariance $0.16^2I_2$ and branch mass $0.94$. A centered Gaussian
+residual has mass $0.06$ and covariance $1.25^2I_2$. The resulting
+Lebesgue density concentrates around the ring while its centerline carries
+zero observation probability. Figure~\ref{fig:volcano} displays the density,
+an empirical histogram and the radial law. The construction separates a
+branch's geometric image from its probability mass and observation width.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.97\linewidth,clip]{figures/volcano_density.pdf}
+\caption{A circular Gaussian tube produces a volcano-shaped density.
+(a) The specified density. (b) A bivariate histogram of 16,000 draws,
+normalized by the full sample size. Bottom: sampled radii and their
+density $2\pi r p(r)$.}
+\label{fig:volcano}
+\end{figure}
+\input{main_visual_examples.tex}
+\FloatBarrier
+
+\section{Normalized Finite-Skeleton Estimation}
+\label{sec:learning}
+Positive quadrature weights $w_{bm}$ and coordinate nodes $s_{bm}$ give
+\begin{equation}
+ C_b(\eta_b)=\sum_mw_{bm}h_b(s_{bm};\eta_b),\qquad
+ \kappa_{bm}(\eta_b)=\frac{w_{bm}h_b(s_{bm};\eta_b)}{C_b(\eta_b)},\qquad
+ g_b^{\mathrm{grid}}(x)=\sum_m\kappa_{bm}k_b(x\mid s_{bm}).
+ \label{eq:grid}
+\end{equation}
+For $C_b>0$, the node probabilities sum to one and each finite-grid branch
+is normalized. Normalization is essential when $h_b$ changes: otherwise its
+quadrature error can enter the apparent branch mass. Accuracy relative to
+the continuous integral remains a grid-resolution question.
+
+The declared objective is
+\begin{equation}
+ F_n(\theta)=\sum_i\log p_\theta^{\mathrm{grid}}(x_i)
+                  -\operatorname{Pen}(\theta).
+ \label{eq:objective}
+\end{equation}
+Node responsibilities are
+$r_{ibm}=\pi_b\kappa_{bm}k_b(x_i\mid s_{bm})/p_\theta^{\mathrm{grid}}(x_i)$.
+Writing $n_b^{\mathrm{eff}}=\sum_{i,m}r_{ibm}$, the occupancy block of the
+EM surrogate contains
+\begin{equation}
+ \sum_{i,m}r_{ibm}\log h_b(s_{bm};\eta_b)
+                 -n_b^{\mathrm{eff}}\log C_b(\eta_b).
+ \label{eq:occupancy}
+\end{equation}
+Its second term must remain in the optimization. A Dirichlet penalty on
+outer masses yields updates proportional to $n_c^{\mathrm{eff}}+\alpha_c-1$
+when $\alpha_c>1$; penalties on other parameters remain in their respective
+blocks.
+
+\begin{algorithm}[H]
+\caption{Objective-checked finite-grid estimation}
+\label{alg:grid}
+\begin{algorithmic}[1]
+\Require Observations, declared branches and component families, positive
+quadrature rule, penalty, feasible starts, and stopping tolerances.
+\For{each start}
+ \State Normalize node probabilities $\kappa_{bm}$ and evaluate $F_n$.
+ \Repeat
+  \State Compute responsibilities for all nodes and residual components.
+  \State Update masses and propose occupancy, geometry, and noise blocks.
+  \State Retain the normalizer in \eqref{eq:occupancy} and all penalties.
+  \State Accept feasible block steps only if they do not decrease $F_n$.
+ \Until{objective and stationarity tolerances hold, or the iteration limit is reached}
+ \State Record the objective, stopping status, and any active constraints.
+\EndFor
+\State Select the feasible fit with largest recorded objective; retain all statuses.
+\end{algorithmic}
+\end{algorithm}
+
+\begin{proposition}[Fixed-quadrature GEM monotonicity]
+\label{prop:gem}
+Fix the normalized quadrature law, latent label set, parameter space and
+penalty. Suppose the observed densities are finite and positive at the old
+and proposed iterates. An update that does not decrease the penalized
+expected complete-data objective cannot decrease $F_n$.
+\end{proposition}
+The proof is the EM lower-bound argument
+\citep{dempster1977em,wu1983convergence}, given in
+Appendix~\ref{app:numerical-theory}. Algorithm~\ref{alg:grid}
+states the objective checks for approximate block updates. After covariance
+factorization, a responsibility pass costs $O(nMd^2)$ for $M$ dense-covariance
+nodes, or $O(nMd)$ for isotropic kernels. This per-pass calculation leaves the
+number of iterations and nonconvex optimization behavior to the selected
+parameterization.
+
+With fixed kernels, weight estimation is concave. A positive pseudocount
+penalty can select a unique maximizer even when some likelihood weights are
+unidentified. The next section distinguishes optimization uniqueness from
+identification. The two-arm experiments use closed-form longitudinal
+convolution and direct likelihood optimization. The PBMC analysis uses a
+specified MST width/residual heuristic; its small-mass-change stopping rule
+is reported separately from objective-checked GEM.
+
+\section{Identification and Fixed-Stratum Inference}
+\label{sec:identification}
+\subsection{Identification of a Grouped Mass}
+Fix normalized kernels $f_1,\ldots,f_K$ relative to $\nu$, their grouping,
+and an interior simplex weight $w\in\R^K$. Write $p_w=\sum_jw_jf_j$ and
+$T_\zeta(w)=\zeta^\top w$. For a branch mass, $\zeta$ indicates the nodes
+assigned to that branch. Define the likelihood-null directions
+\begin{equation}
+ \mathcal V_0=\{v\in\R^K:\ \boldsymbol 1^\top v=0,
+                  \textstyle\sum_jv_jf_j=0\ \nu\text{-a.e.}\}.
+ \label{eq:nullspace}
+\end{equation}
+\begin{proposition}[Fixed-kernel grouped target]
+\label{prop:identification}
+The target $T_\zeta$ is identified on the interior simplex exactly when
+$\zeta\perp\mathcal V_0$. Eliminate $w_K$ and set, for $j<K$,
+\begin{equation}
+ U_j(x)=\frac{f_j(x)-f_K(x)}{p_w(x)},\qquad
+ I_w=\E_w\{U(X)U(X)^\top\},\qquad
+ \beta_{\zeta,j}=\zeta_j-\zeta_K,
+ \label{eq:information}
+\end{equation}
+with $U=0$ where $p_w=0$. Identification is equivalent to
+$\beta_\zeta\in\operatorname{range}(I_w)$. Every centered square-integrable
+influence function $\phi$ satisfying $\E_w(\phi U)=\beta_\zeta$ obeys
+\begin{equation}
+\E_w(\phi^2)\ge\beta_\zeta^\top I_w^+\beta_\zeta,
+ \label{eq:bound}
+\end{equation}
+where $I_w^+$ is the Moore-Penrose pseudoinverse.
+\end{proposition}
+
+Equal mixture densities have weight difference in $\mathcal V_0$.
+Orthogonality therefore gives sufficiency, and a small interior perturbation
+along a null direction gives necessity. The null space of $I_w$ describes
+the same density-preserving directions; projection onto the score span gives
+the bound. Appendix~\ref{app:proof} supplies the proof. The result applies
+standard mixture-identification and information arguments
+\citep{mclachlan2000finite,vandervaart1998asymptotic} to the declared grouped
+target.
+
+If $f_1=f_2$ within one branch, their separate weights are unidentified but
+their sum can remain identified when the branch separates from the other
+kernels. Assigning those duplicate kernels to different branches instead
+destroys identification of the separate masses. Refining a within-branch
+grid and increasing cross-branch overlap can therefore have different
+consequences for the same target.
+
+This information bound conditions on fixed kernels. Estimating noise,
+geometry, residuals, or the grouping introduces additional nuisance
+directions. Prior curvature can select among observationally equivalent
+weights but cannot identify them from the likelihood. For fitted six- and
+eight-parameter two-arm models, Section~\ref{sec:intervals} instead evaluates
+intervals using the complete estimated parameter chart.
+
+\subsection{Regular Fixed-Stratum Likelihood Theory}
+Joint estimation follows regular likelihood theory on an identifiable
+fixed-stratum chart \citep{vandervaart1998asymptotic}.
+
+\begin{theorem}[Regular finite-SFD likelihood theory]
+\label{thm:regular-finite-sfd}
+Let $X_i\stackrel{\mathrm{iid}}\sim P_{\theta_0}$ in a finite SFD chart
+satisfying conditions \textup{(R1)--(R5)} of
+Appendix~\ref{app:regular-conditions}. Put
+$U_0=\nabla\log p_{\theta_0}$ and
+$I_0=\E_{\theta_0}(U_0U_0^\top)\succ0$.
+The consistent interior likelihood maximizer $\hat\theta_n$ satisfies
+\begin{equation}
+ \sqrt n(\hat\theta_n-\theta_0)
+ =I_0^{-1}n^{-1/2}\sum_i U_0(X_i)+o_p(1)
+ \ \rightsquigarrow\ \Normal(0,I_0^{-1}).
+ \label{eq:regular-limit}
+\end{equation}
+For every differentiable fixed-stratum target $\psi$,
+\begin{equation}
+ \sqrt n\{\psi(\hat\theta_n)-\psi(\theta_0)\}
+ \ \rightsquigarrow\ \Normal\!\left(0,
+ \dot\psi(\theta_0)I_0^{-1}\dot\psi(\theta_0)^\top\right).
+ \label{eq:target-limit}
+\end{equation}
+\end{theorem}
+The proof and regular contrast tests are in Appendix~\ref{app:regular-theory};
+Appendix~\ref{app:numerical-theory} treats numerical-likelihood transfer.
+
+\clearpage
+\section{Experiments}
+\label{sec:experiments}
+Four studies assess weight estimation on a supplied skeleton, target recovery,
+sensitivity to geometry and noise, and allocation as a prediction feature.
+Each uses 25 repetitions. Simulation
+repetitions are independent; PBMC splits overlap within one cell collection.
+Numbers in parentheses are Monte Carlo SEs of displayed means. Generating
+labels are used for evaluation, not fitting. Appendix~\ref{app:experiments}
+specifies optimizers, controls, preprocessing, and stopping rules; all
+prespecified density and marker controls appear in Appendix~\ref{app:controls}.
+
+\subsection{Known-Skeleton Weight Estimation}
+\label{sec:known-skeleton}
+Five specified laws use snowflake, stylized-face, maze, ECG-like, and
+torus-knot geometries. Each repetition provides 1000 training observations
+and 1000 independent test observations. EM estimates the component masses
+with the generating geometry, coordinate laws and noise kernels fixed;
+each tube integral uses 64 coordinate nodes. Figure~\ref{fig:known-skeleton-fitted}
+shows test log density, component-mass RMSE and component-label accuracy.
+The oracle evaluates the generating law, rather than an estimated model.
+This diagnostic isolates mass estimation from geometry and noise estimation;
+the next two studies examine the latter distinction. Appendix~
+\ref{app:external-density-controls} gives classical-distribution and copula
+reference controls separately.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,clip]{figures/known_skeleton_fitted.pdf}
+\caption{Weight-only SFD fitting on five supplied skeletons. Top: test log
+density for generic controls, fitted SFD and the oracle. Bottom: fitted
+component-mass RMSE and component-label accuracy. Bars show one Monte Carlo
+SE over 25 repetitions. The generating geometry and kernels are fixed;
+truth labels are used only for evaluation. GMM-16 and GMM-32 results are
+retained in the accompanying summary data.}
+\label{fig:known-skeleton-fitted}
+\end{figure}
+\FloatBarrier
+
+\subsection{When a Width Change Becomes a Mass Change}
+Two unit-length arms meet at angles $\pm\pi/6$. Each branch coordinate is
+$\Normal(\mu_b^{\mathrm{loc}},0.16^2)$ truncated to $[0,1]$. Observation
+noise has tangent SD $0.025$ and normal SD $\sigma_b$. The residual is
+$\Normal((0.4,0),0.55^2 I_2)$. The reference has masses $(0.4,0.4,0.2)$,
+locations $(0.5,0.5)$, and widths $(0.07,0.07)$. Three alternatives change
+only masses to $(0.6,0.2,0.2)$, the upper location to $0.7$, or the upper
+width to $0.14$. Each group supplies 1000 training and 2000 independent test
+observations per repetition. The location parameter and truncated coordinate
+mean are distinct; the position alternative changes the latter by about
+$0.189$.
+
+The joint fit estimates two mass logits, two occupancy locations, and two
+normal widths, with origin, directions, coordinate scale, tangent noise,
+and residual law supplied. Two mass-only ablations fix either the reference
+kernels or the true group-specific kernels. This comparison isolates the
+consequence of fixing a kernel that changes between groups.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth,clip]{figures/mechanism_separation.pdf}
+\caption{Two-arm target recovery. Panels a--c show mass, coordinate-mean
+and width contrasts; d shows the mass contrast under a width-only change.
+Dashed lines mark truth. Points and bars give means and $\pm1.96$ Monte
+Carlo SEs over 25 repetitions. The two kernel ablations estimate masses only.}
+\label{fig:mechanism}
+\end{figure}
+
+The joint estimates are \MechMass{} for the mass contrast, \MechPosition{}
+for position, and \MechWidth{} for width, against generating contrasts
+$0.200$, $0.189$, and $0.0700$. Under the width-only alternative the true
+mass contrast is zero, yet fixed reference kernels produce
+\MechFixedSpurious{}. Joint estimation produces \MechJointSpurious{}
+(Figure~\ref{fig:mechanism}). The fixed-width model explains some increased
+transverse spread by lowering the fitted branch mass. All 300 selected SFD
+fits meet their optimizer stopping rule without parameter-bound contacts.
+
+Gaussian, GMM-4, GMM-8, and KDE controls are scored on test log density and
+the observable probability $\Pbb(X_2>0)$. Their components are not assigned
+branch labels. These controls assess prediction, whereas the joint-versus-
+fixed comparison assesses kernel constraints on a specified latent target.
+Every run, including GMM iteration-limit warnings, is retained in the
+supplementary score tables.
+
+\subsection{Estimated Directions and Misspecified Noise}
+The four group laws are repeated with Gaussian arms at $\pm30^\circ$,
+overlapping arms at $\pm15^\circ$, and $\pm30^\circ$ arms with transverse
+Student-$t_5$ noise scaled to the same SD. Each condition has the same sample
+sizes and 25 repetitions. Fits use correct directions, rotate both by
+$5^\circ$, or estimate two angles from training coordinates. The
+learned-direction fit has eight parameters and retains the supplied origin,
+two-arm family, coordinate and tangent scales, and residual law.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth,clip]{figures/geometry_validation.pdf}
+\caption{Geometry and noise sensitivity under supplied, $5^\circ$-rotated
+or learned directions. Panels a--e show target contrasts and mass
+cross-effects; f shows angle RMSE in degrees. Dashed lines mark truth;
+bars give $\pm1.96$ Monte Carlo SEs over 25 repetitions. All fitted tubes
+are Gaussian, including those fitted to Student-$t_5$ noise.}
+\label{fig:geometry}
+\end{figure}
+
+The learned-angle reference RMSEs are \AngleGaussian{}, \AngleOverlap{},
+and \AngleHeavy{} degrees. Estimated width contrasts are \WidthGaussian{},
+\WidthOverlap{}, and \WidthHeavy{}, against $0.0700$. Under heavy-tailed
+noise, learning directions leaves a systematic width discrepancy under the
+Gaussian fitted family. Figure~\ref{fig:geometry} also shows the effects of
+overlap and direction error on mass contrasts. All 900 selected SFD fits
+meet their stopping rule without boundary contacts; selected GMM fits
+converge under the expanded budget.
+
+\paragraph{Parameter intervals.}
+\label{sec:intervals}
+A post-hoc calculation uses each saved fit's complete six- or eight-parameter
+information matrix, including angles when estimated. With learned directions
+and Gaussian noise, nominal 95\% Wald intervals cover generating mass,
+position, and width contrasts in \CovGaussianLearnedMass{},
+\CovGaussianLearnedPosition{}, and \CovGaussianLearnedWidth{} repetitions.
+For rotated directions with Student-$t_5$ noise, width-contrast coverage is
+\CovHeavyRotatedInfo{} with information covariance and
+\CovHeavyRotatedSand{} with sandwich covariance. The latter adjusts
+estimated variability, not misspecification of the fitted center. These
+parameter intervals are distinct from the Monte Carlo bars in
+Figure~\ref{fig:geometry}. Appendix~\ref{app:intervals} reports the full
+calculation, numerical checks, and coverage counts. Each count has only
+25 repetitions, so even 25/25 provides limited precision about coverage.
+
+\FloatBarrier
+\subsection{Allocation as a Feature-Held-Out Readout}
+The public PBMC3k collection \citep{tenxgenomics2016pbmc3k} supplies an
+internal prediction study. In each of 25 splits, 2160 cells train the
+representation and 540 are held out. Eighteen predeclared marker genes are
+excluded from predictor normalization and selection. Training cells alone
+determine gene filtering, the 1000 selected nonmarker genes, scaling,
+clipping, and two-component PCA. Test cells use those transforms. Density
+scores refer to this two-dimensional representation, not the gene-count space.
+
+An MST-skeleton tube with Gaussian residual is compared with Gaussian, GMM,
+and KDE densities. Mean test log density is \PBMCDensitySFD{} for SFD,
+\PBMCDensityGMM{} for GMM-8, and \PBMCDensityKDE{} for KDE; generic controls
+give the stronger density predictions here (Figure~\ref{fig:pbmc}). The
+allocation question is whether a posterior tube feature adds information
+beyond the two PCs and KDE log density.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth,clip]{figures/pbmc_inductive_validation.pdf}
+\caption{PBMC readouts on training-fitted PCs. a: test log density.
+b: paired log-loss changes for the held-out B-marker proxy, relative to
+PCs plus KDE density. SFD adds one tube-odds feature; GMM adds seven
+memberships. Bars give $\pm1.96$ split Monte Carlo SEs over 25 overlapping
+cell splits, not donor-level uncertainty.}
+\label{fig:pbmc}
+\end{figure}
+
+The binary outcome is a predeclared B-marker proxy computed from the held-out
+marker panel. Logistic readouts share the inner validation cells and penalty
+grid. Adding scalar SFD tube log odds changes mean test log loss from
+\PBMCMarkerBase{} to \PBMCMarkerSFD{}, a paired difference of
+\PBMCPairedSFD{}. GMM posterior entropy gives \PBMCMarkerEntropy{};
+seven GMM membership coordinates give \PBMCMarkerMembership{}. Allocation
+features therefore improve this readout beyond density features, with the
+larger generic-mixture representation performing better. These unequal-
+dimension readouts predict a marker proxy within one collection; they do
+not estimate independent-donor uncertainty.
+\FloatBarrier
+
+\section{Discussion}
+SFD separates branch probability, longitudinal occupancy, and observation
+noise within one declared probability law. The two-arm experiments show why
+this separation matters: a fixed-width constraint can turn increased spread
+into an apparent mass decrease, and estimating both blocks corrects that
+error under the specified model. The identification analysis explains why
+grouped masses can remain meaningful when numerical subdivisions are
+unidentified, and where overlap prevents that interpretation.
+
+The interpretation conditions on a declared skeleton and kernel family.
+The experiments supply a two-arm family or a particular MST representation;
+arbitrary topology recovery is a separate problem. PBMC shows allocation
+features within a training-fitted representation, with stronger generic
+controls retained. Scientific state interpretation requires independently
+defined states and sampling units. A prospective time-resolved model would
+add a latent stochastic process and temporal observations
+(Appendix~\ref{app:geometry}).
+
+\section*{Data and Document Sources}
+The accompanying compilation archive provides the manuscript sources,
+figures and saved numerical summaries. PBMC3k data are distributed by
+10x Genomics \citep{tenxgenomics2016pbmc3k}; preprocessing and analysis
+settings are given in Appendix~\ref{app:experiments}. The archive is a
+document-compilation snapshot, separate from the complete experiment
+software and raw datasets. Figure~\ref{fig:elvis-example} reconstructs a pose
+from an author-supplied Elvis Presley photograph; the photograph itself is
+not reproduced. Figures~\ref{fig:density-examples}b and
+\ref{fig:face-example} use a Doraemon-inspired synthetic geometry.
+
+\section*{License}
+The author-authored text and original scientific material are licensed under
+Creative Commons Attribution 4.0 International. This license excludes
+third-party rights in the Elvis-derived illustration and Doraemon-inspired
+examples. Their inclusion does not grant permission to reuse those elements.
+Document styles retain their own license notices in the compilation archive.
+\label{maintext:end}
+\clearpage
+\input{references.tex}
+\clearpage
+\appendix
+\input{supplement.tex}
+\end{document}
