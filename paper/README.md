@@ -1,10 +1,14 @@
 # Author Preprint
 
-This directory is the self-contained 26 October 2026 source snapshot,
+This directory is the self-contained 27 October 2026 source snapshot,
 including the 34-page PDF, thirteen figures, saved numerical evidence and
 table extraction code. It preserves the definitions, related work, formal
 results, assumptions and proofs. It is an author version, not a claim of
 journal acceptance or a published repository DOI.
+
+The current revision adds the public software and reproduction link to
+Code and Data Availability. Scientific results, theorem statements and
+figure numbering are unchanged from the 26 October version.
 
 ```bash
 latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex

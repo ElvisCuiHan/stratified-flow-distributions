@@ -1,8 +1,8 @@
 <div align="center">
 
-# Stratified Flow Distributions
+<img src="docs/assets/banner.png" alt="Stratified Flow Distributions: Branch Mass, Occupancy, and Noise. Elvis-derived contours and Doraemon-inspired generated observations." width="100%">
 
-**Mixed-support density models with explicit strata**
+**Stratified Flow Distributions: Branch Mass, Occupancy, and Noise**
 
 [![Tests](https://github.com/ElvisCuiHan/stratified-flow-distributions/actions/workflows/tests.yml/badge.svg)](https://github.com/ElvisCuiHan/stratified-flow-distributions/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB)
@@ -97,6 +97,7 @@ controls without a fitted SFD. All are indexed in [Reproducing the Paper](docs/R
 | `python reproduce.py figures --out runs/figures` | Redraw fitted comparison and appendix controls | Neither |
 | `Rscript scripts/plot_sfd_evidence.R runs/r-figures` | Redraw three main results figures | Neither |
 | `python reproduce.py elvis --out runs/elvis` | Rebuild the Elvis illustration from released contours | Neither |
+| `python scripts/generate_repository_banner.py --out runs/banner` | Rebuild the header from released contours and samples | Neither |
 | `python reproduce.py smoke --out runs/smoke` | Small deterministic weight-fitting experiment | Fits only |
 | `python reproduce.py fit known --out runs/known` | 25-repeat known-skeleton comparison | Long fitting run |
 | `python reproduce.py fit mechanism --out runs/mechanism` | 25-repeat mechanism experiment | Long fitting run |
@@ -126,7 +127,7 @@ tests/                 Numerical and release-integrity tests
 ```bibtex
 @misc{cui2026sfd,
   author = {Cui, Elvis Han},
-  title = {Stratified Flow Distributions: Mixed-Support Density Models with Explicit Strata},
+  title = {Stratified Flow Distributions: Branch Mass, Occupancy, and Noise},
   year = {2026},
   howpublished = {Preprint and accompanying software},
   url = {https://github.com/ElvisCuiHan/stratified-flow-distributions}

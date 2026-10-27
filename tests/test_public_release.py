@@ -18,6 +18,7 @@ def test_readme_local_links_and_images_exist():
             assert (ROOT / target.split("#")[0]).is_file(), target
     assert "docs/assets/elvis.png" in text
     assert "docs/assets/doraemon-and-friends.png" in text
+    assert "docs/assets/banner.png" in text
 
 
 def test_checked_paper_has_34_pages_and_no_private_paths():
@@ -26,6 +27,32 @@ def test_checked_paper_has_34_pages_and_no_private_paths():
     text = "\n".join(page.extract_text() for page in reader.pages)
     for forbidden in ("/Users/", "/var/folders/", "/private/", "SHA256", "sha256"):
         assert forbidden not in text
+
+
+def test_paper_title_and_public_code_link():
+    title = "Stratified Flow Distributions: Branch Mass, Occupancy, and Noise"
+    reader = PdfReader(ROOT / "paper/sfd_preprint.pdf")
+    assert reader.metadata.title == title
+    assert title in (ROOT / "README.md").read_text()
+    assert title in (ROOT / "CITATION.cff").read_text()
+    links = [annotation.get_object().get("/A", {}).get("/URI", "")
+             for page in reader.pages for annotation in page.get("/Annots", [])]
+    assert "https://github.com/ElvisCuiHan/stratified-flow-distributions" in links
+
+
+def test_banner_renders_from_released_data(tmp_path):
+    import json
+    from PIL import Image
+    from scripts.generate_repository_banner import render
+    render(tmp_path)
+    with Image.open(tmp_path / "banner.png") as image:
+        assert image.size == (1920, 615)
+        assert np.asarray(image.convert("RGB")).std() > 10
+    assert (tmp_path / "banner.svg").is_file()
+    contract = json.loads((tmp_path / "banner_sources.json").read_text())
+    assert contract["new_fits"] == 0
+    assert contract["doraemon"]["observations"] == 1600
+    assert contract["elvis"]["components"] == 35
 
 
 def test_reference_histogram_rows_are_training_only():

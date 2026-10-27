@@ -1,6 +1,6 @@
 # Figure-to-Evidence Index
 
-Numbers refer to the 34-page 26 October 2026 preprint.
+Numbers refer to the 34-page 27 October 2026 preprint.
 All archived figure PDFs are in `paper/figures/`.
 
 | Figure | Subject | Reproduction input / implementation |
@@ -22,3 +22,19 @@ All archived figure PDFs are in `paper/figures/`.
 Figures 1-5 and 10 illustrate declared laws or samples, not fitted-method
 evidence. Figures 12-13 include oracle/control baselines but no fitted SFD.
 Rendering may differ with fonts, Matplotlib/R versions or PDF backends.
+
+## Repository Banner
+
+The README header is separate from the numbered manuscript figures. It shows
+the released Elvis-derived contours beside the first two coordinates of the
+archived 1,600-observation Doraemon-inspired sample. Colors distinguish the
+curve-tube observations from localized Gaussian components; no models are
+fitted to create the header.
+
+```bash
+python scripts/generate_repository_banner.py --out runs/banner
+```
+
+This exports PNG and vector SVG versions with a source manifest.
+The [material-specific rights exclusions](../THIRD_PARTY_NOTICES.md) also
+apply to the header; the source photograph is not included.

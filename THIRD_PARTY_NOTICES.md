@@ -18,3 +18,6 @@ Users must establish an appropriate basis before reusing affected material.
 
 See also the manuscript-specific `paper/MANUSCRIPT_LICENSE.txt` and
 `paper/THIRD_PARTY_NOTICES.txt`.
+
+The README banner uses the same released contour geometry and synthetic
+character sample; the exclusions above apply to both banner formats.

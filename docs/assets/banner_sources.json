@@ -1,0 +1,22 @@
+{
+  "purpose": "repository header, not an experimental result or manuscript figure",
+  "canvas_pixels": [
+    1920,
+    615
+  ],
+  "elvis": {
+    "source": "data/derived/elvis_contours.csv",
+    "components": 35
+  },
+  "doraemon": {
+    "curves": "data/derived/face_3d/curve_grid.csv",
+    "sample": "data/derived/face_3d/observations.csv",
+    "displayed_coordinates": [
+      "Y1",
+      "Y2"
+    ],
+    "observations": 1600
+  },
+  "new_fits": 0,
+  "rights": "THIRD_PARTY_NOTICES.md; photo-derived and character elements excluded from MIT and CC BY grants"
+}

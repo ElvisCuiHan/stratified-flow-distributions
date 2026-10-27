@@ -11,7 +11,7 @@ url: "https://github.com/ElvisCuiHan/stratified-flow-distributions"
 license: MIT
 preferred-citation:
   type: unpublished
-  title: "Stratified Flow Distributions: Mixed-Support Density Models with Explicit Strata"
+  title: "Stratified Flow Distributions: Branch Mass, Occupancy, and Noise"
   authors:
     - family-names: Cui
       given-names: Elvis Han

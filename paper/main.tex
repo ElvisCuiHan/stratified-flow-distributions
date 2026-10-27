@@ -610,13 +610,19 @@ defined states and sampling units. A prospective time-resolved model would
 add a latent stochastic process and temporal observations
 (Appendix~\ref{app:geometry}).
 
-\section*{Data and Document Sources}
-The accompanying compilation archive provides the manuscript sources,
-figures and saved numerical summaries. PBMC3k data are distributed by
-10x Genomics \citep{tenxgenomics2016pbmc3k}; preprocessing and analysis
-settings are given in Appendix~\ref{app:experiments}. The archive is a
-document-compilation snapshot, separate from the complete experiment
-software and raw datasets. Figure~\ref{fig:elvis-example} reconstructs a pose
+\clearpage
+\section*{Code and Data Availability}
+The software, experiment scripts, saved per-repetition results, and manuscript
+sources are available at
+\begin{center}
+\url{https://github.com/ElvisCuiHan/stratified-flow-distributions}
+\end{center}
+The repository includes instructions for checking numerical summaries,
+regenerating figures, and rerunning experiments. PBMC3k raw data are available
+from 10x Genomics \citep{tenxgenomics2016pbmc3k}; preprocessing and analysis
+settings are given in Appendix~\ref{app:experiments}.
+
+Figure~\ref{fig:elvis-example} reconstructs a pose
 from an author-supplied Elvis Presley photograph; the photograph itself is
 not reproduced. Figures~\ref{fig:density-examples}b and
 \ref{fig:face-example} use a Doraemon-inspired synthetic geometry.
@@ -627,6 +633,7 @@ Creative Commons Attribution 4.0 International. This license excludes
 third-party rights in the Elvis-derived illustration and Doraemon-inspired
 examples. Their inclusion does not grant permission to reuse those elements.
 Document styles retain their own license notices in the compilation archive.
+The original software is released separately under the MIT license.
 \label{maintext:end}
 \clearpage
 \input{references.tex}

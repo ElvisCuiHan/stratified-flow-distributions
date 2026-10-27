@@ -1,6 +1,6 @@
 # Reproducing the Paper
 
-The release accompanies the 26 October 2026, 34-page author preprint.
+The release accompanies the 27 October 2026, 34-page author preprint.
 It contains executable software, archived numeric evidence, and document
 sources. It is not a claim that every historical fit has been rerun for
 this release.
